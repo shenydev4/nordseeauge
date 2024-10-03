@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export default async (req: NextRequest) => {
+'use server'
+
+export default async function POST(req: NextRequest) {
     try {
         const { to, cc, bcc, message } = await req.json();
 
