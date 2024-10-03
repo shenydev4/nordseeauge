@@ -1,7 +1,7 @@
+'use server'
+
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-
-'use server'
 
 export default async function POST(req: NextRequest) {
     try {
