@@ -1,0 +1,55 @@
+
+
+
+// responsive design comfort
+
+@mixin value($command, $value-xl, $value-md, $value-xs) {
+  @media ( min-width: 1400px ) {
+    #{$command}: $value-xl;
+  }
+  @media ( max-width: 1399px ) {
+    #{$command}: $value-md;
+  }
+  @media ( max-width: 767px ) {
+    #{$command}: $value-xs;
+  }
+}
+
+@mixin value-xl($command, $value-xl) {
+  @media ( min-width: 1400px ) {
+    #{$command}: $value-xl;
+  }
+}
+
+@mixin value-md($command, $value-md) {
+  @media ( max-width: 1399px ) and ( min-width: 768px ) {
+    #{$command}: $value-md;
+  }
+}
+
+@mixin value-xs($command, $value-xs) {
+  @media ( max-width: 767px ) {
+    #{$command}: $value-xs;
+  }
+}
+
+
+// colors
+
+$primary: rgb(96 165 250); // bg-400
+$accent: rgb(254 240 138); // yellow-200
+
+$blue-1: rgb(14 165 233); // sky-500
+$yellow-1: rgb(254 249 195); // bg-yellow-100
+
+
+// fonts
+
+@font-face {
+  font-family: "barlow";
+  src: url('/Fonts/Barlow-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: "barlow-light";
+  src: url('/Fonts/Barlow-Light.ttf') format("truetype");
+}

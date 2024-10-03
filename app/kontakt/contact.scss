@@ -1,0 +1,38 @@
+@import '../settings';
+
+label {
+  font-size: 20px;
+  font-family: barlow;
+}
+
+input, textarea, select, textarea {
+  padding: 10px 12px;
+  font-family: barlow;
+  background-color: rgba($color: #000000, $alpha: 0.1) ;
+  border-radius: 3px;
+  outline: solid 3px rgba($color: #000000, $alpha: 0.0);
+  transition: all .3s ease;
+  font-size: 18px;
+  font-weight: bold;
+
+  &:focus {
+    outline: solid 3px rgba($color: #000000, $alpha: 0.5);
+  }
+  &:hover, &:focus {
+    box-shadow: inset 0 0 10px rgba($color: #000000, $alpha: 0.3);
+  }
+}
+
+button[type='submit'] {
+  background-color: $accent;
+  width: 50%;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: barlow;
+  padding: 10px 0;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: $yellow-1;
+  }
+}

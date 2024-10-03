@@ -1,0 +1,67 @@
+.swiper-pagination {
+  background-color: gray;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: -54px;
+  left: 68px;
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 20px;
+}
+.swiper-pagination-bullet {
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: lightgray;
+  border-radius: 7px;
+  transition: width 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+  background-color: lightgray;
+  width: 28px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.swiper-pagination-bullet-active::after {
+  content: "";
+  height: 100%;
+  background-color: rgb(254, 240, 138);
+  position: absolute;
+  width: 100%;
+}
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+  cursor: pointer;
+}
+.swiper-button-next, .swiper-button-prev {
+  display: flex;
+  width: 26px;
+  height: 26px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: -54px;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  transition: all 0.4s ease;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="lightgray" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>');
+  background-size: 20px 20px;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  cursor: pointer;
+}
+.swiper-button-next:hover::after, .swiper-button-prev:hover::after {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="rgb(254, 240, 138)" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>');
+}
+.swiper-button-next {
+  left: 34px;
+}
+.swiper-button-prev::after {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=swiper.css.map */

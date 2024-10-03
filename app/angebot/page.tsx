@@ -1,31 +1,31 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "@nordseeauge",
+  title: "@nordseeauge | Angebot",
   description: "description",
 };
 
 import Hero from '@/app/components/layout/Hero';
-import TextHome from '@/app/components/TextHome';
-import ExploreCards from '@/app/components/ExploreCards';
+import CardsExtern from '@/app/components/CardsExtern';
+import Bookings from '@/app/components/Bookings';
 
 export default function Home() {
   return (
     <>
       <Hero 
-        isLarge 
         captionIntro="Moin und Herzlich Willkommen bei der NordseeAuge Agentur."
         captionText="Erlebe hier exklusive Hintergründe, Planungen und Angebote rund um die Nordsee."
       />
 
       <div className="fluid-container">
-        <div className='container space-before-0 flex flex-wrap'>
+        <div className="container space-before-0">
 
-          <TextHome 
+          <CardsExtern
             className="space-after-0"
           />
-          <ExploreCards 
+
+          <Bookings
             className="space-after-1"
-            headline="Entdecken Sie Nordsee.Auge"
+            headline="Buchungen"
           />
 
         </div>

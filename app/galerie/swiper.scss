@@ -1,0 +1,80 @@
+@mixin element-color($color) {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#{$color}" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>');
+}
+
+.swiper {
+  &-pagination {
+    background-color: gray;
+    width: fit-content;
+    position: absolute; top: -54px; left: 68px;
+    display: flex;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 20px;
+
+    &-bullet {
+      display: block;
+      width: 14px;
+      height: 14px;
+      background-color: lightgray;
+      border-radius: 7px;
+      transition: width .3s ease;
+
+      &-active {
+        background-color: lightgray;
+        width: 28px;
+        border-radius: 14px;
+        position: relative;
+        overflow: hidden;
+        &::after {
+          content: '';
+          height: 100%;
+          background-color: rgb(254 240 138);
+          position: absolute;
+          width: 100%;
+        }
+      }
+
+      &:not(.swiper-pagination-bullet-active):hover {
+        cursor: pointer
+      }
+    }
+  }
+
+  &-button {
+    &-next, &-prev {
+      display: flex;
+      width: 26px;
+      height: 26px;
+      background-color: gray;
+      border-radius: 50%;
+      position: absolute;
+      top: -54px;
+
+      &::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        transition: all .4s ease;
+        @include element-color(lightgray);
+        background-size: 20px 20px;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+          @include element-color(rgb(254 240 138));
+        }
+      } 
+    }
+
+    &-next {
+      left: 34px;
+    }
+    &-prev::after {
+      transform: rotate(180deg);
+    }
+  }
+}
