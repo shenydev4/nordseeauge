@@ -62,7 +62,7 @@ a {
     @include value(font-size, 28px, 24px, 22px);
   }
   &.link-sm {
-    @include value(font-size, 24px, 22px, 18px);
+    @include value(font-size, 24px, 20px, 18px);
   }
 
   &:not(.card) {
