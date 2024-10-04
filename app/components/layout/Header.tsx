@@ -78,11 +78,11 @@ export default function Header() {
               </button>
             </div>
             <div className='flex flex-col gap-6'>
-              <a href="/angebot" className='!text-[42px] after:!w-0 font-bold'>Angebot</a>
-              <a href="/neuigkeiten" className='!text-[42px] after:!w-0 font-bold'>Neuigkeiten</a>
-              <a href="/galerie" className='!text-[42px] after:!w-0 font-bold'>Galerie</a>
-              <a href="/ueber-uns" className='!text-[42px] after:!w-0 font-bold'>Über uns</a>
-              <a href="/kontakt" className='!text-[42px] after:!w-0 font-bold'>Kontakt</a>
+              <a href="/angebot" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/angebot' && 'text-yellow-200'}`}>Angebot</a>
+              <a href="/neuigkeiten" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
+              <a href="/galerie" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
+              <a href="/ueber-uns" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
+              <a href="/kontakt" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
             </div>
             <div className='flex xl:gap-10 gap-6 mt-auto'>
               <a href="/datenschutz">Datenschutz</a>
