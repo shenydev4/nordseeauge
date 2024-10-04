@@ -61,31 +61,33 @@ export default function Header() {
           </button>
         </div>
 
-        <div className={`absolute left-0 top-0 w-full h-dvh bg-red-500 duration-700 flex-col gap-16 p-8 ${isMobileMenu ? 'flex':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
-          <div className='flex justify-between items-center'>
-            <a href="/" className='block after:!w-0 relative w-[120px] h-[120px]'>
-              <Image 
-                src='/logo.webp'
-                alt='NordseeAuge Logo'
-                fill
-                sizes='(max-width: 1399px) 120px, 180px'
-                className='w-full h-full top-0 left-0 object-cover'
-              />
-            </a>
-            <button onClick={() => handleMobileMenu(false)} className='w-10 h-10 ml-auto'>
-              <Cross />
-            </button>
-          </div>
-          <div className='flex flex-col gap-6'>
-            <a href="/angebot" className='!text-[42px] after:!w-0 font-bold'>Angebot</a>
-            <a href="/neuigkeiten" className='!text-[42px] after:!w-0 font-bold'>Neuigkeiten</a>
-            <a href="/galerie" className='!text-[42px] after:!w-0 font-bold'>Galerie</a>
-            <a href="/ueber-uns" className='!text-[42px] after:!w-0 font-bold'>Über uns</a>
-            <a href="/kontakt" className='!text-[42px] after:!w-0 font-bold'>Kontakt</a>
-          </div>
-          <div className='flex xl:gap-10 gap-6 mt-auto'>
-            <a href="/datenschutz">Datenschutz</a>
-            <a href="/impressum">Impressum</a>
+        <div className={`absolute left-0 top-0 w-full h-dvh bg-red-500 duration-700 p-8 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
+          <div className="container h-full flex flex-col gap-16">
+            <div className='flex justify-between items-center'>
+              <a href="/" className='block after:!w-0 relative w-[120px] h-[120px]'>
+                <Image 
+                  src='/logo.webp'
+                  alt='NordseeAuge Logo'
+                  fill
+                  sizes='(max-width: 1399px) 120px, 180px'
+                  className='w-full h-full top-0 left-0 object-cover'
+                />
+              </a>
+              <button onClick={() => handleMobileMenu(false)} className='w-10 h-10 ml-auto'>
+                <Cross />
+              </button>
+            </div>
+            <div className='flex flex-col gap-6'>
+              <a href="/angebot" className='!text-[42px] after:!w-0 font-bold'>Angebot</a>
+              <a href="/neuigkeiten" className='!text-[42px] after:!w-0 font-bold'>Neuigkeiten</a>
+              <a href="/galerie" className='!text-[42px] after:!w-0 font-bold'>Galerie</a>
+              <a href="/ueber-uns" className='!text-[42px] after:!w-0 font-bold'>Über uns</a>
+              <a href="/kontakt" className='!text-[42px] after:!w-0 font-bold'>Kontakt</a>
+            </div>
+            <div className='flex xl:gap-10 gap-6 mt-auto'>
+              <a href="/datenschutz">Datenschutz</a>
+              <a href="/impressum">Impressum</a>
+            </div>
           </div>
         </div>
 

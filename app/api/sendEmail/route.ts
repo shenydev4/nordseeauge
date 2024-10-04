@@ -18,7 +18,6 @@ export async function POST(req: NextRequest) {
         });
 
         await new Promise((resolve, reject) => {
-            // verify connection configuration
             transporter.verify(function (error:any, success:any) {
                 if (error) {
                     console.log(error);
@@ -40,7 +39,6 @@ export async function POST(req: NextRequest) {
         });
 
         await new Promise((resolve, reject) => {
-            // send mail
             transporter.sendMail(info, (err, info) => {
                 if (err) {
                     console.error(err);
@@ -55,6 +53,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ message: 'Die Email wurde erfolgreich versendet.', info }, { status: 200 });
     } catch (error: any) {
         console.error('Error sending email:', error);
-        return NextResponse.json({ message: 'Leider gab es einen Fehler bei der Formularübermittlung. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine Mail an beispielmail@mail.de', error: error.message }, { status: 500 });
+        return NextResponse.json({ message: 'Leider gab es einen Fehler bei der Formularübermittlung. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine Mail an info@nordseeauge.de', error: error.message }, { status: 500 });
     }
 }

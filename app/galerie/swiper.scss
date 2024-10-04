@@ -6,7 +6,7 @@
   &-pagination {
     background-color: gray;
     width: fit-content;
-    position: absolute; top: -54px; left: 68px;
+    position: absolute; top: -48px; left: 88px;
     display: flex;
     gap: 6px;
     padding: 6px;
@@ -44,8 +44,8 @@
   &-button {
     &-next, &-prev {
       display: flex;
-      width: 26px;
-      height: 26px;
+      width: 38px;
+      height: 38px;
       background-color: gray;
       border-radius: 50%;
       position: absolute;
@@ -53,12 +53,12 @@
 
       &::after {
         content: '';
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         margin: auto;
         transition: all .4s ease;
         @include element-color(lightgray);
-        background-size: 20px 20px;
+        background-size: 24px 24px;
       }
 
       &:hover {
@@ -71,7 +71,7 @@
     }
 
     &-next {
-      left: 34px;
+      left: 44px;
     }
     &-prev::after {
       transform: rotate(180deg);

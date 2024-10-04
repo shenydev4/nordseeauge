@@ -23,7 +23,7 @@ export default function Slider({
   };
 
   return (
-    <div className={`${className} overflow-hidden flex xl:flex-row flex-col justify-between xl:gap-0 gap-12`}>
+    <div className={`${className} overflow-hidden flex xl:flex-row flex-col justify-between xl:gap-0 md:gap-12 gap-6`}>
 
       <div className='xl:w-[450px]'>
         <h2 className='mb-6'>
