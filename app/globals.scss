@@ -14,11 +14,11 @@ body {
   margin: 0;
   min-height: 100dvh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 h1 {
-  @include value(font-size, 68px, 54px, 38px);
+  @include value(font-size, 58px, 54px, 38px);
   font-family: barlow;
   text-transform: uppercase;
   font-weight: bold;
@@ -138,16 +138,85 @@ ul {
   @include value(width, 1300px, 700px, 370px);
 }
 
+
+// XS values (no mixin)
 .space-before-0 {
-  margin-top: 120px;
-}
-.space-after-0 {
-  margin-bottom: 120px; 
+  margin-top: 60px;
 }
 
 .space-before-1 {
+  margin-top: 80px;
+}
+
+.space-before-2 {
+  margin-top: 100px;
+}
+
+.space-before-3 {
+  margin-top: 120px;
+}
+
+.space-before-4 {
   margin-top: 160px;
 }
+
+.space-after-0 {
+  margin-bottom: 60px;
+}
+
 .space-after-1 {
-  margin-bottom: 160px; 
+  margin-bottom: 80px;
+}
+
+.space-after-2 {
+  margin-bottom: 100px; 
+}
+
+.space-after-3 {
+  margin-bottom: 120px;
+}
+
+.space-after-4 {
+  margin-bottom: 160px;
+}
+
+// XL values (using mixin)
+.xl-space-before-0 {
+  @include value-xl(margin-top, 60px); 
+}
+
+.xl-space-before-1 {
+  @include value-xl(margin-top, 80px); 
+}
+
+.xl-space-before-2 {
+  @include value-xl(margin-top, 100px); 
+}
+
+.xl-space-before-3 {
+  @include value-xl(margin-top, 120px);
+}
+
+.xl-space-before-4 {
+  @include value-xl(margin-top, 160px); 
+}
+
+.xl-space-after-0 {
+  @include value-xl(margin-bottom, 60px); 
+}
+
+.xl-space-after-1 {
+  @include value-xl(margin-bottom, 80px); 
+}
+
+.xl-space-after-2 {
+  @include value-xl(margin-bottom, 100px);
+}
+
+.xl-space-after-3 {
+  @include value-xl(margin-bottom, 120px); 
+}
+
+.xl-space-after-4 {
+  @include value-xl(margin-bottom, 160px);
 }

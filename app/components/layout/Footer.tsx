@@ -2,6 +2,7 @@ import Instagram from '@/app/components/icons/Instagram'
 import Youtube from '@/app/components/icons/Youtube'
 import Facebook from '@/app/components/icons/Facebook'
 import X from '@/app/components/icons/X'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -70,7 +71,15 @@ export default function Footer() {
               <a href="/kontakt" className='link-sm w-fit md:mx-auto'>Kontakt</a>
             </div>
             <div className='xl:w-1/4 flex justify-center items-center xl:basis-1/4 md:basis-1/3 w-full md:order-2 order-1'>
-              <a href="/" className='h-fit'>LOGO</a>
+              <a href="/" className='block after:!w-0 hover:scale-110 relative xl:w-[180px] xl:h-[180px] w-[120px] h-[120px]'>
+                <Image
+                  src='/logo.webp'
+                  alt='NordseeAuge Logo'
+                  fill
+                  sizes='(max-width: 1399px) 120px, 180px'
+                  className='w-full h-full top-0 left-0 object-cover'
+                />
+              </a>
             </div>
             <div className='xl:w-1/4 flex flex-col justify-center xl:basis-1/4 md:basis-1/3 w-1/2 md:order-3 order-3'>
               <p className='mx-auto'>26125 Oldenburg</p>

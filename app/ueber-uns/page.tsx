@@ -46,16 +46,16 @@ export default function Home() {
       />
 
       <div className="fluid-container">
-        <div className="container space-before-0">
+        <div className="container xl-space-before-3 space-before-1">
 
           <Persona
-            className="space-after-0"
+            className="xl-space-after-3 space-after-1"
             headline="Zu meiner Person"
             
           />
 
           <Corporations 
-            className="space-after-0"
+            className="xl-space-after-3 space-after-1"
             headline="Kooperationen"
             introText="Ich bin ich offen für Nordsee orientierte Kooperation und begleite Events."
             caption="bisherige Kooperationen:"
@@ -63,7 +63,7 @@ export default function Home() {
           />
 
           <Accordion
-            className="space-after-0"
+            className="xl-space-after-3 space-after-1"
           />
 
         </div>

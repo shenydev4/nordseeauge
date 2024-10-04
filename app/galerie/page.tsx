@@ -32,16 +32,17 @@ export default function Home() {
       />
 
       <div className="fluid-container">
-        <div className="container space-before-0">
+        <div className="container xl-space-before-3 space-before-1">
 
           <Map 
+            className="xl-space-after-3 space-after-1"
             apiKey={apiKey}
             center={center}
             markers={markers}
           />
 
           <Slider 
-            className="space-after-1 space-before-1"
+            className="xl-space-after-3 space-after-1"
             // WIP
           />
 

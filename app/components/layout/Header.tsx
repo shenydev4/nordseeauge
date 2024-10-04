@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Cross from '../icons/Cross'
+import Image from 'next/image'
 
 export default function Header() {
 
@@ -30,11 +31,19 @@ export default function Header() {
   }
 
   return (
-    <div id="Header" className='absolute z-50 w-full bg-gradient-to-b from-black/[0.4] to-transparent'>
-      <div className='container flex justify-between py-6'>
+    <div id="Header" className='absolute z-50 w-full bg-gradient-to-b from-black/[0.6] to-transparent'>
+      <div className='container flex items-center justify-between py-6'>
 
         <div>
-          <a href="/">LOGO</a>
+          <a href="/" className='block after:!w-0 hover:scale-110 relative xl:w-[102px] xl:h-[102px] w-[78px] h-[78px]'>
+            <Image
+              src='/logo.webp'
+              alt='NordseeAuge Logo'
+              fill
+              sizes='(max-width: 1399px) 78px, 102px'
+              className='w-full h-full top-0 left-0 object-cover'
+            />
+          </a>
         </div>
         <div className='xl:gap-12 md:gap-5 uppercase md:flex hidden'>
           <a href="/angebot" className='link-sm'>Angebot</a>

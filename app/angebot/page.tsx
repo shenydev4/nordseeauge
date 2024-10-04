@@ -17,14 +17,14 @@ export default function Home() {
       />
 
       <div className="fluid-container">
-        <div className="container space-before-0">
+        <div className="container xl-space-before-3 space-before-1">
 
           <CardsExtern
-            className="space-after-0"
+            className="xl-space-after-2 space-after-1"
           />
 
           <Bookings
-            className="space-after-1"
+            className="xl-space-after-3 space-after-1"
             headline="Buchungen"
           />
 

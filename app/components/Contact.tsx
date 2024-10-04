@@ -5,7 +5,11 @@ import '@/app/kontakt/contact.css'
 import Cross from './icons/Cross';
 import Letter from './icons/Letter';
 
-export default function Contact() {
+export default function Contact({
+  className
+}:{
+  className?: string
+}) {
 
   const [formData, setFormData] = useState({
     company: '',
@@ -75,7 +79,7 @@ export default function Contact() {
   };
 
   return (
-    <div className='space-before-1 space-after-1 flex xl:flex-row flex-col xl:gap-32 gap-12 xl:items-center'>
+    <div className={`${className} flex xl:flex-row flex-col xl:gap-32 gap-12 xl:items-center`}>
 
       <div className='basis-1/2'>
         <h3 className='mb-6 flex md:items-center gap-4 md:flex-row flex-col'>

@@ -16,24 +16,17 @@ export default function Home() {
         captionText="Erlebe hier exklusive Hintergründe, Planungen und Angebote rund um die Nordsee."
       />
       <div className="fluid-container">
-        <div className="container space-before-0">
+        <div className="container xl-space-before-3 space-before-1">
 
           <BasicText
-            className="space-after-0"
+            className="xl-space-after-3 space-after-1"
           />
 
           {/* give array, if array length is 1 do 1 else double, array contains item > headline:string, listdots{boldtext?:string, normaltext?:string}[] */}
           <BasicList 
-            className="space-after-0"
+            className="xl-space-after-3 space-after-1"
             // array
           />
-
-          {/* 
-          <BasicList 
-            className="space-after-1"
-            // array
-          /> 
-          */}
 
         </div>
       </div>

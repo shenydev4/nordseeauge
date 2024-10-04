@@ -16,10 +16,10 @@ export default function Home() {
       />
       
       <div className="fluid-container">
-        <div className="container space-before-1">
+        <div className="container xl-space-before-3 space-before-1">
 
           <Contact
-
+            className="xl-space-after-3 space-after-1"
           />
 
         </div>

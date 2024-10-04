@@ -5,12 +5,13 @@ import { Loader } from '@googlemaps/js-api-loader';
 import { useInView } from 'react-intersection-observer';
 
 interface MapProps {
+  className?: string;
   apiKey: string;
   center: google.maps.LatLngLiteral;
   markers: google.maps.MarkerOptions[];
 }
 
-const Map: React.FC<MapProps> = ({ apiKey, center, markers }) => {
+const Map: React.FC<MapProps> = ({ className, apiKey, center, markers }) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   const { ref, inView } = useInView({
@@ -51,7 +52,7 @@ const Map: React.FC<MapProps> = ({ apiKey, center, markers }) => {
   }, [apiKey, center, markers, inView, mapLoaded]);
 
   return (
-    <div ref={ref}> {/* Use the ref from useInView */}
+    <div ref={ref} className={className}> {/* Use the ref from useInView */}
       <div className="h-[500px] w-full" ref={mapRef} />
     </div>
   );
