@@ -24,7 +24,7 @@ export default function Hero({
 
       <div className={`w-full absolute -translate-y-1/2 ${isLarge ? 'top-1/2':'top-[240px]'}`}>
         <div className="container">
-          <h1 className={`mb-4 [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_80%)] ${isLarge ? 'xl:text-[58px] md:text-[54px] text-[28px]':'xl:text-[58px] md:text-[38px] text-[28px]'}`}>Nordsee.Auge Agentur</h1>
+          <h1 className={`mb-4 [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_80%)] ${isLarge ? 'xl:text-[58px] md:text-[54px] text-[28px]':'xl:text-[58px] md:text-[38px] text-[28px]'}`}>NordseeAuge Agentur</h1>
           <p className='font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_80%)]'>{captionIntro}</p>
           <p className='font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_80%)]'>{captionText}</p>
         </div>

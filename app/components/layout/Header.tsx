@@ -37,7 +37,7 @@ export default function Header() {
       <div className='container flex items-center justify-between py-6'>
 
         <div>
-          <a href="/" className='block after:!w-0 hover:scale-110 relative w-[100px] h-[100px]'>
+          <a href="/" className={`block after:!w-0 hover:scale-110 relative w-[100px] h-[100px] duration-700 ${mobileMenuOpacity ? 'opacity-0':'opacity-100'}`}>
             <Image
               src='/logo.webp'
               alt='NordseeAuge Logo'
@@ -56,37 +56,40 @@ export default function Header() {
         </div>
 
         <div className='md:hidden h-10'>
-          <button onClick={() => handleMobileMenu(true)} className='w-10 h-10 text-gray-900'>
+          <button onClick={() => handleMobileMenu(true)} className={`w-10 h-10 text-gray-900 duration-700 ${mobileMenuOpacity ? 'opacity-0':'opacity-100'}`}>
             <Menu />
           </button>
         </div>
 
-        <div className={`absolute left-0 top-0 w-full h-dvh bg-red-500 duration-700 p-8 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
-          <div className="container h-full flex flex-col gap-16">
+        <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh bg-black/[0.2] duration-700 p-8 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
+          <div className='absolute w-full h-full top-0 left-0 -z-10'>
+            <img src="/bg-placeholder2.jpg" alt="" className='object-cover blur-sm h-full w-full scale-105'/>
+          </div>
+          <div className="container relative h-full flex flex-col">
             <div className='flex justify-between items-center'>
-              <a href="/" className='block after:!w-0 relative w-[120px] h-[120px]'>
-                <Image 
+              <a href="/" className='block after:!w-0 hover:scale-110 relative w-[170px] h-[170px]'>
+                <Image
                   src='/logo.webp'
                   alt='NordseeAuge Logo'
                   fill
-                  sizes='(max-width: 1399px) 120px, 180px'
+                  sizes='(max-width: 1399px) 78px, 102px'
                   className='w-full h-full top-0 left-0 object-cover'
                 />
               </a>
-              <button onClick={() => handleMobileMenu(false)} className='w-10 h-10 ml-auto'>
+              <button onClick={() => handleMobileMenu(false)} className='w-14 h-14 text-gray-900'>
                 <Cross />
               </button>
             </div>
-            <div className='flex flex-col gap-6'>
-              <a href="/angebot" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/angebot' && 'text-yellow-200'}`}>Angebot</a>
-              <a href="/neuigkeiten" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
-              <a href="/galerie" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
-              <a href="/ueber-uns" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
-              <a href="/kontakt" className={`!text-[42px] after:!w-0 font-bold ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
+            <div className='flex flex-col gap-6 absolute top-1/2 -translate-y-1/2 mt-10'>
+              <a href="/angebot" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/angebot' && 'text-yellow-200'}`}>Angebot</a>
+              <a href="/neuigkeiten" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
+              <a href="/galerie" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
+              <a href="/ueber-uns" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
+              <a href="/kontakt" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
             </div>
             <div className='flex xl:gap-10 gap-6 mt-auto'>
-              <a href="/datenschutz">Datenschutz</a>
-              <a href="/impressum">Impressum</a>
+              <a href="/datenschutz" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Datenschutz</a>
+              <a href="/impressum" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Impressum</a>
             </div>
           </div>
         </div>

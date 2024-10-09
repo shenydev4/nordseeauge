@@ -1,7 +1,7 @@
 import Instagram from '@/app/components/icons/Instagram'
 import Youtube from '@/app/components/icons/Youtube'
 import Facebook from '@/app/components/icons/Facebook'
-import X from '@/app/components/icons/X'
+import LinkedIn from '@/app/components/icons/LinkedIn'
 import Image from 'next/image'
 
 export default function Footer() {
@@ -28,36 +28,31 @@ export default function Footer() {
       <div className='z-0 relative' id='footer-socials'>
         <img src="/bg-footer-2.jpg" alt="" className='z-0 w-full h-full absolute top-0 left-0 object-cover grayscale opacity-50 blur-[3px]'/>
 
-        <div className="container z-10 relative flex xl:justify-around justify-center py-10 flex-wrap gap-y-8">
-          <a className='group flex flex-col gap-4 justify-center xl:basis-0 basis-1/3 after:!w-0' href='https://www.instagram.com/nordseeauge' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8 mx-auto'>
+        <div className="container z-10 relative flex md:gap-20 gap-12 justify-center py-10">
+          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.instagram.com/nordseeauge' target='_blank'>
+            <div className='xl:w-10 xl:h-10 w-8 h-8'>
               <Instagram />
             </div>
-            <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p>
+            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
           </a>
-          <a className='group flex flex-col gap-4 justify-center xl:basis-0 basis-1/3 after:!w-0' href='https://www.instagram.com/martina_k_reels' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8 mx-auto'>
-              <Instagram />
-            </div>
-            <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@martina_k_reels</p>
-          </a>
-          <a className='group flex flex-col gap-4 justify-center xl:basis-0 basis-1/3 after:!w-0' href='https://www.youtube.com/@nordseeauge' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8 mx-auto'>
+
+          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.youtube.com/@nordseeauge' target='_blank'>
+            <div className='xl:w-10 xl:h-10 w-8 h-8'>
               <Youtube />
             </div>
-            <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p>
+            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
           </a>
-          <a className='group flex flex-col gap-4 justify-center xl:basis-0 basis-1/3 after:!w-0' href='https://www.facebook.com/nordseeauge' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8 mx-auto'>
+          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.facebook.com/nordseeauge' target='_blank'>
+            <div className='xl:w-10 xl:h-10 w-8 h-8'>
               <Facebook />
             </div>
-            <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p>
+            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
           </a>
-          <a className='group flex flex-col gap-4 justify-center xl:basis-0 basis-1/3 after:!w-0' href='https://x.com/nordseeauge' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8 mx-auto'>
-              <X />
+          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.linkedin.com/in/martina-kornfeld-a16972256/' target='_blank'>
+            <div className='xl:w-10 xl:h-10 w-8 h-8'>
+              <LinkedIn />
             </div>
-            <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p>
+            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
           </a>
         </div>
 
@@ -82,6 +77,7 @@ export default function Footer() {
               </a>
             </div>
             <div className='xl:w-1/4 flex flex-col justify-center xl:basis-1/4 md:basis-1/3 w-2/3 md:order-3 order-3'>
+              <p className='mx-auto'>@nordseeauge</p>
               <p className='mx-auto'>26125 Oldenburg</p>
               <a className='mx-auto' href='MAILTO:info@nordseeauge.de'>info@nordseeauge.de</a>
             </div>
