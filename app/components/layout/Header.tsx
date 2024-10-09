@@ -61,7 +61,7 @@ export default function Header() {
           </button>
         </div>
 
-        <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh bg-black/[0.2] duration-700 p-8 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
+        <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh duration-700 p-8 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
           <div className='absolute w-full h-full top-0 left-0 -z-10'>
             <img src="/bg-placeholder2.jpg" alt="" className='object-cover blur-sm h-full w-full scale-105'/>
           </div>
