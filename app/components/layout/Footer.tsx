@@ -30,26 +30,26 @@ export default function Footer() {
 
         <div className="container z-10 relative flex md:gap-20 gap-12 justify-center py-10">
           <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.instagram.com/nordseeauge' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8'>
+            <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <Instagram />
             </div>
             {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
           </a>
 
           <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.youtube.com/@nordseeauge' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8'>
+            <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <Youtube />
             </div>
             {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
           </a>
           <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.facebook.com/nordseeauge' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8'>
+            <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <Facebook />
             </div>
             {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
           </a>
           <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.linkedin.com/in/martina-kornfeld-a16972256/' target='_blank'>
-            <div className='xl:w-10 xl:h-10 w-8 h-8'>
+            <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <LinkedIn />
             </div>
             {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
