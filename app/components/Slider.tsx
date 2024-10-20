@@ -37,10 +37,6 @@ export default function Slider({
             <p>shop</p>
           </a>
         </div>
-        
-        <p className="caption mt-8">
-          *Bei Interaktion mit den Videos gelten YouTube's Datenschutzerklärungen
-        </p>
       </div>
       
       <div className='xl:w-[800px] xl:ml-[50px] py-[72px] overflow-hidden'>
