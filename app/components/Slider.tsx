@@ -21,7 +21,7 @@ export default function Slider({
         <h2 className='mb-6'>
           Ein paar Highlights
         </h2>
-        <p className='mb-4'>Sehen Sie sich gerne Videos* und Bilder von der Nordsee an.</p>
+        <p className='mb-4'>Sehen Sie sich gerne Videos und Bilder von der Nordsee an.</p>
         <p className='mb-4'>Wenn Sie mehr sehen möchten besuchen Sie gerne meine Socials, außerdem können Sie eingerahmte Bilder von uns im Shop kaufen.</p>
         <div className='flex gap-10'>
           <a className="flex items-center gap-3 after:!w-0" href='https://www.instagram.com/nordseeauge/' target="_blank">
