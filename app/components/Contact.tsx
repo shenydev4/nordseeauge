@@ -159,9 +159,13 @@ export default function Contact({
             id=""
             onChange={(e) => setFormData({ ...formData, object: e.target.value })}
           >
-            <option value='- bitte auswählen -'>- bitte auswählen -</option>
+            <option value='- bitte auswählen -' hidden>- bitte auswählen -</option>
+            <option value='Imagefilm, Video, Foto, Drohne'>Imagefilm, Video, Foto, Drohne</option>
             <option value='privates Fotoshooting'>privates Fotoshooting</option>
+            <option value='Eventbegleitung'>Eventbegleitung</option>
             <option value='Kooperation'>Kooperation</option>
+            <option value='gemeinnütziges Netzwerk'>gemeinnütziges Netzwerk</option>
+            <option value='sonstiges'>sonstiges</option>
           </select>
         </div>
 

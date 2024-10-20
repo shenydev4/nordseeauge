@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 import Hero from '../components/layout/Hero';
 import Map from '../components/Map';
 import Slider from '@/app/components/Slider';
+import Video from '@/app/components/Video';
 
 export default function Home() {
 
@@ -43,7 +44,10 @@ export default function Home() {
 
           <Slider 
             className="xl-space-after-3 space-after-1"
-            // WIP
+          />
+
+          <Video 
+            className="xl-space-after-3 space-after-1"
           />
 
         </div>

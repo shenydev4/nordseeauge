@@ -3,9 +3,9 @@
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import YouTube from "react-youtube";
 import Image from 'next/image';
 import Instagram from "@/app/components/icons/Instagram";
+import Shop from "@/app/components/icons/Shop";
 import '@/app/galerie/swiper.css'
 
 export default function Slider({
@@ -13,14 +13,6 @@ export default function Slider({
 }:{
   className?:string
 }) {
-
-  const opts = {
-    height: "390",
-    width: "640",
-    playerVars: {
-      autoplay: 0,
-    },
-  };
 
   return (
     <div className={`${className} overflow-hidden flex xl:flex-row flex-col justify-between xl:gap-0 md:gap-12 gap-6`}>
@@ -32,15 +24,15 @@ export default function Slider({
         <p className='mb-4'>Sehen Sie sich gerne Videos* und Bilder von der Nordsee an.</p>
         <p className='mb-4'>Wenn Sie mehr sehen möchten besuchen Sie gerne meine Socials, außerdem können Sie eingerahmte Bilder von uns im Shop kaufen.</p>
         <div className='flex gap-10'>
-          <a className="flex items-center gap-3 after:!w-0" href='' target="_blank">
+          <a className="flex items-center gap-3 after:!w-0" href='https://www.instagram.com/nordseeauge/' target="_blank">
             <span className="block w-6 h-6 mt-1.5">
               <Instagram />
             </span>
             <p>nordseeauge</p>
           </a>
-          <a className="flex items-center gap-3 after:!w-0" href='' target="_blank">
+          <a className="flex items-center gap-3 after:!w-0" href='https://shop.nordseeauge.de/?l=de' target="_blank">
             <span className="block w-6 h-6 mt-1.5">
-              <Instagram />
+              <Shop />
             </span>
             <p>shop</p>
           </a>
@@ -64,15 +56,9 @@ export default function Slider({
           keyboard={{ enabled: true, }}
         >
           <SwiperSlide className='w-full aspect-video my-auto'>
-            <div>
-              <YouTube videoId="QF0EkWvoB74" opts={opts} className='aspect-video' iframeClassName='h-full w-full' />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className='w-full aspect-video my-auto'>
             <div className='aspect-video'>
               <Image 
-                src='/slider-1.jpg'
+                src='/slider-2.jpg'
                 alt='image'
                 fill
                 className='object-contain'
@@ -83,7 +69,7 @@ export default function Slider({
           <SwiperSlide className='w-full aspect-video my-auto'>
             <div className='aspect-video'>
               <Image 
-                src='/slider-2.jpg'
+                src='/slider-1.jpg'
                 alt='image'
                 fill
                 className='object-contain'
