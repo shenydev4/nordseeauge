@@ -19,9 +19,10 @@ body {
 
 h1 {
   @include value(font-size, 54px, 50px, 32px);
-  font-family: barlow;
+  font-family: bebas;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 4px;
 }
 
 h2 {
@@ -51,6 +52,10 @@ p, .p {
     color: #4b5563;
     transform: skewX(-6deg);
   }
+  &.text-font-bebas {
+    font-family: bebas !important;
+    letter-spacing: 3px;
+  }
 }
 
 a {
@@ -63,6 +68,10 @@ a {
   }
   &.link-sm {
     @include value(font-size, 24px, 22px, 20px);
+  }
+  &.text-font-bebas {
+    font-family: bebas !important;
+    letter-spacing: 3px;
   }
 
   &:not(.card) {

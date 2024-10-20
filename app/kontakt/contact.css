@@ -6,6 +6,10 @@
   font-family: "barlow-light";
   src: url("/Fonts/Barlow-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "bebas";
+  src: url("/Fonts/BebasNeue-Regular.ttf") format("truetype");
+}
 label {
   font-size: 20px;
   font-family: barlow;

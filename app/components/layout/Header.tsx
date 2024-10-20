@@ -63,7 +63,7 @@ export default function Header() {
 
         <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh duration-700 p-8 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
           <div className='absolute w-full h-full top-0 left-0 -z-10'>
-            <img src="/bg-placeholder2.jpg" alt="" className='object-cover blur-sm h-full w-full scale-105'/>
+            <img src="/bg-placeholder2.jpg" alt="" className='object-cover blur-sm h-full w-full scale-105 brightness-75'/>
           </div>
           <div className="container relative h-full flex flex-col">
             <div className='flex justify-between items-center'>
@@ -80,12 +80,12 @@ export default function Header() {
                 <Cross />
               </button>
             </div>
-            <div className='flex flex-col gap-6 absolute top-1/2 -translate-y-1/2 mt-10'>
-              <a href="/angebot" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/angebot' && 'text-yellow-200'}`}>Angebot</a>
-              <a href="/neuigkeiten" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
-              <a href="/galerie" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
-              <a href="/ueber-uns" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
-              <a href="/kontakt" className={`!text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
+            <div className='flex flex-col gap-3 absolute top-1/2 -translate-y-1/2 mt-10'>
+              <a href="/angebot" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/angebot' && 'text-yellow-200'}`}>Angebot</a>
+              <a href="/neuigkeiten" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
+              <a href="/galerie" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
+              <a href="/ueber-uns" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
+              <a href="/kontakt" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
             </div>
             <div className='flex xl:gap-10 gap-6 mt-auto'>
               <a href="/datenschutz" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Datenschutz</a>

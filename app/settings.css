@@ -5,4 +5,8 @@
 @font-face {
   font-family: "barlow-light";
   src: url("/Fonts/Barlow-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "bebas";
+  src: url("/Fonts/BebasNeue-Regular.ttf") format("truetype");
 }/*# sourceMappingURL=settings.css.map */

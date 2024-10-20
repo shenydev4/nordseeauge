@@ -9,6 +9,10 @@
   font-family: "barlow-light";
   src: url("/Fonts/Barlow-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "bebas";
+  src: url("/Fonts/BebasNeue-Regular.ttf") format("truetype");
+}
 html {
   scroll-behavior: smooth;
 }
@@ -21,9 +25,10 @@ body {
 }
 
 h1 {
-  font-family: barlow;
+  font-family: bebas;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 4px;
 }
 @media (min-width: 1400px) {
   h1 {
@@ -133,6 +138,10 @@ p.caption, .p.caption {
     font-size: 16px;
   }
 }
+p.text-font-bebas, .p.text-font-bebas {
+  font-family: bebas !important;
+  letter-spacing: 3px;
+}
 
 a {
   font-family: barlow;
@@ -168,6 +177,10 @@ a {
   a.link-sm {
     font-size: 20px;
   }
+}
+a.text-font-bebas {
+  font-family: bebas !important;
+  letter-spacing: 3px;
 }
 a:not(.card):not(.btn):hover::after {
   width: 90%;
