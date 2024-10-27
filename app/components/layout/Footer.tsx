@@ -1,10 +1,23 @@
+'use client'
+
+import { useState } from 'react';
+import CookieBanner from './CookieBanner';
+
 import Instagram from '@/app/components/icons/Instagram'
 import Youtube from '@/app/components/icons/Youtube'
 import Facebook from '@/app/components/icons/Facebook'
 import LinkedIn from '@/app/components/icons/LinkedIn'
 import Image from 'next/image'
+import ExternalLink from '@/app/components/typo/ExternalLink'
 
 export default function Footer() {
+
+  const [showCookieBanner, setShowCookieBanner] = useState(false);
+
+  const handleShowCookieBanner = () => {
+    setShowCookieBanner(true);
+  };
+
   return (
     <div id='Footer' className='mt-auto relative overflow-hidden bg-sky-500/[0.4]'>
 
@@ -14,7 +27,7 @@ export default function Footer() {
           <div className='xl:w-4/5 w-full'>
             <p className='p-large font-bold mb-12'>Sie haben ein gemeinnütziges Projekt oder Unternehmen?</p>
             <p>Reichweite erweitern - für gemeinnützige Projekte/Unternehmen rund um die Nordsee, durch gezielte Vernetzung und Promotion in unserem Netzwerk. Unser Beitrag ist es unter anderem, dieses kostenlos für Sie umzusetzen (Nach Verfügbarkeit) und so derartige Projekte bekannter zu machen und zu unterstützen.
-              <br/><br/>Wenn Sie Fragen haben oder etwas buchen möchten, nehmen Sie  gerne <a href='./kontakt' className='link-intext'>Kontakt</a> zu mir auf oder besuchen meinen <a target='_blank' href='https://shop.nordseeauge.de/?l=de' className='link-intext'>Shop</a>.
+              <br/><br/>Wenn Sie Fragen haben oder etwas buchen möchten, nehmen Sie  gerne <a href='./kontakt' className='link-intext'>Kontakt</a> zu mir auf oder besuchen meinen <ExternalLink href="https://shop.nordseeauge.de/?l=de" className="link-intext">Shop</ExternalLink>.
             </p>
           </div> 
           <div className='xl:w-1/5 w-full flex xl:flex-col xl:items-end xl:justify-center md:gap-10 gap-6 xl:mt-0 mt-8'>
@@ -29,31 +42,26 @@ export default function Footer() {
         <img src="/bg-footer-2.jpg" alt="" className='z-0 w-full h-full absolute top-0 left-0 object-cover grayscale opacity-50 blur-[3px]'/>
 
         <div className="container z-10 relative flex md:gap-20 gap-12 justify-center py-10">
-          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.instagram.com/nordseeauge' target='_blank'>
+          <ExternalLink href="https://www.instagram.com/nordseeauge" className="group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110">
             <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <Instagram />
             </div>
-            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
-          </a>
-
-          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.youtube.com/@nordseeauge' target='_blank'>
+          </ExternalLink>
+          <ExternalLink href="https://www.youtube.com/@nordseeauge" className="group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110">
             <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <Youtube />
             </div>
-            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
-          </a>
-          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.facebook.com/nordseeauge' target='_blank'>
+          </ExternalLink>
+          <ExternalLink href="https://www.facebook.com/nordseeauge" className="group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110">
             <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <Facebook />
             </div>
-            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
-          </a>
-          <a className='group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110' href='https://www.linkedin.com/in/martina-kornfeld-a16972256/' target='_blank'>
+          </ExternalLink>
+          <ExternalLink href="https://www.linkedin.com/in/martina-kornfeld-a16972256/" className="group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110">
             <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <LinkedIn />
             </div>
-            {/* <p className='text-center caption transition-custom !text-gray-800 group-hover:!text-yellow-200'>@nordseeauge</p> */}
-          </a>
+          </ExternalLink>
         </div>
 
         <div className="container z-10 relative py-6 flex flex-col">
@@ -87,6 +95,10 @@ export default function Footer() {
               <p className=''>Copyright © {new Date().getFullYear()} NordseeAuge</p>
             </div>
             <div className='flex xl:gap-10 gap-6'>
+              <button onClick={handleShowCookieBanner}>
+                <a>Cookies</a>
+              </button>
+              {showCookieBanner && <CookieBanner calledFromFooter />}
               <a href="/datenschutz">Datenschutz</a>
               <a href="/impressum">Impressum</a>
             </div>

@@ -35,15 +35,15 @@ export default function Home() {
       <div className="fluid-container">
         <div className="container xl-space-before-3 space-before-1">
 
+          <Slider 
+            className="xl-space-after-3 space-after-1"
+          />
+
           <Map 
             className="xl-space-after-3 space-after-1"
             apiKey={apiKey}
             center={center}
             markers={markers}
-          />
-
-          <Slider 
-            className="xl-space-after-3 space-after-1"
           />
 
           <Video 

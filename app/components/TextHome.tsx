@@ -1,7 +1,9 @@
+import ExternalLink from '@/app/components/typo/ExternalLink'
+
 export default function TextHome({
-    className
-  }:{
-    className?:string
+  className
+}:{
+  className?:string
 }) {
   return (
     <div className={className}>
@@ -19,7 +21,7 @@ export default function TextHome({
       </ul>
 
       <h3 className="mb-4">Sie möchten ein Stück Nordsee für sich?</h3>
-      <p>Jedes Bild, das Sie von uns aus den sozialen Medien kennen (@nordseeauge), können Sie hier in unserem <a target='_blank' href='https://shop.nordseeauge.de/?l=de' className='link-intext'>Onlineshop</a> erwerben.</p>
+      <p>Jedes Bild, das Sie von uns aus den sozialen Medien kennen (@nordseeauge), können Sie hier in unserem <ExternalLink href="https://shop.nordseeauge.de/?l=de" className="link-intext">Onlineshop</ExternalLink> erwerben.</p>
       <p className="mb-14">Ist Ihr Wunschmotiv nicht dabei? <a href='./kontakt' className='link-intext'>Kontaktieren</a> Sie uns gerne!</p>
 
       <h3>Wir bieten Ihnen außerdem:</h3>

@@ -14,6 +14,7 @@ export default function Home() {
       <Hero 
         captionIntro="Moin und Herzlich Willkommen bei der NordseeAuge Agentur."
         captionText="Erlebe hier exklusive Hintergründe, Planungen und Angebote rund um die Nordsee."
+        isLarge
       />
 
       <div className="fluid-container">
@@ -22,6 +23,7 @@ export default function Home() {
           <TextHome 
             className="xl-space-after-3 space-after-1"
           />
+
           <ExploreCards 
             className="xl-space-after-3 space-after-1"
             headline="Entdecken Sie NordseeAuge"

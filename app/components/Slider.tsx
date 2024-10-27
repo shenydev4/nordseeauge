@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Instagram from "@/app/components/icons/Instagram";
 import Shop from "@/app/components/icons/Shop";
 import '@/app/galerie/swiper.css'
+import ExternalLink from '@/app/components/typo/ExternalLink'
 
 export default function Slider({
   className
@@ -24,18 +25,18 @@ export default function Slider({
         <p className='mb-4'>Sehen Sie sich gerne Videos und Bilder von der Nordsee an.</p>
         <p className='mb-4'>Wenn Sie mehr sehen möchten besuchen Sie gerne meine Socials, außerdem können Sie eingerahmte Bilder von uns im Shop kaufen.</p>
         <div className='flex gap-10'>
-          <a className="flex items-center gap-3 after:!w-0" href='https://www.instagram.com/nordseeauge/' target="_blank">
+          <ExternalLink href="https://www.instagram.com/nordseeauge/" className="flex items-center gap-3 after:!w-0">
             <span className="block w-6 h-6 mt-1.5">
               <Instagram />
             </span>
             <p>nordseeauge</p>
-          </a>
-          <a className="flex items-center gap-3 after:!w-0" href='https://shop.nordseeauge.de/?l=de' target="_blank">
+          </ExternalLink>
+          <ExternalLink href="https://shop.nordseeauge.de/?l=de" className="flex items-center gap-3 after:!w-0">
             <span className="block w-6 h-6 mt-1.5">
               <Shop />
             </span>
             <p>shop</p>
-          </a>
+          </ExternalLink>
         </div>
       </div>
       

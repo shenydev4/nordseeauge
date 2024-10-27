@@ -1,3 +1,5 @@
+import ExternalLink from '@/app/components/typo/ExternalLink'
+
 export default function BasicList({
   className,
 }:{
@@ -11,7 +13,7 @@ export default function BasicList({
           <h2 className="mb-8">Aktuell in 2024:</h2>
           
           <ul>
-            <li><b>Top-Info: Nordseeauge ist offizieller Partner der Sail Bremerhaven '25.</b> Sie wünschen für Ihr Schiff, Unternehmen eine Promotion , dann schicken Sie mir gerne <a href="/kontakt" className="link-intext link-sm">Ihre Anfrage</a>. Die Promotions laufen über unseren Kanal, ggf. in Kollaboration mit <a href="https://www.instagram.com/sailbremerhaven_official/" target="_blank" className="link-intext link-sm">@sailbremerhaven_official</a>, nur nach Absprache mit Bremerhaven.</li>
+            <li><b>Top-Info: Nordseeauge ist offizieller Partner der Sail Bremerhaven '25.</b> Sie wünschen für Ihr Schiff, Unternehmen eine Promotion , dann schicken Sie mir gerne <a href="/kontakt" className="link-intext link-sm">Ihre Anfrage</a>. Die Promotions laufen über unseren Kanal, ggf. in Kollaboration mit <ExternalLink href="https://www.instagram.com/sailbremerhaven_official/" className="link-intext link-sm">@sailbremerhaven_official</ExternalLink>, nur nach Absprache mit Bremerhaven.</li>
             <li><b>Seit August 2024 biete ich <a href="https://workshop.nordseeauge.de" target="_blank" className="link-intext link-sm">Smartphone Kreativ Workshops</a> an der Nordsee an.</b></li>
             <li><b>September:</b> Beachbowl Tunier der Top Football-Teams aus ganz Deutschland, Sail Wilhelmshaven.</li>
             <li><b>August:</b> Maritime Tage Bremerhaven. Nordseeauge on Board der Gulden Leeuw. , Seehundauswilderung vor der Insel Juist</li>

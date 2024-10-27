@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Cross from "@/app/components/icons/Cross";
 import Heart from "@/app/components/icons/Heart";
+import ExternalLink from '@/app/components/typo/ExternalLink'
 
 interface Product {
   category: string;
@@ -242,15 +243,9 @@ export default function Accordion({
                 <p className="caption">Software: {product.software}</p>
               )}
               {product.items.map((item, itemIndex) => (
-                <a 
-                  key={itemIndex} 
-                  href={item.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-fit after:!w-0"
-                >
+                <ExternalLink key={itemIndex} href={item.link} className="w-fit after:!w-0">
                   {item.productName}
-                </a>
+                </ExternalLink>
               ))}
             </div>
           </AccordionBuilder>

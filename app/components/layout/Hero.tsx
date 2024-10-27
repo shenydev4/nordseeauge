@@ -13,7 +13,7 @@ export default function Hero({
 ) {
 
   return (
-    <div id='Hero' className={`${isLarge ? 'min-h-dvh max-h-dvh h-1':'h-[420px]'} relative overflow-hidden max-w-dvw min-w-dvw`}>
+    <div id='Hero' className={`${isLarge ? 'min-h-[420px] max-h-[calc(100vh/(5 /3))] h-[calc(100vh/(5/3))]':'h-[420px]'} relative overflow-hidden max-w-dvw min-w-dvw`}>
         
       <div className='relative overflow-hidden w-full h-full'>
         <div className='absolute w-full h-full z-0'>

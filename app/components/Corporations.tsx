@@ -1,5 +1,6 @@
 import Facebook from "@/app/components/icons/Facebook";
 import Instagram from "@/app/components/icons/Instagram";
+import ExternalLink from '@/app/components/typo/ExternalLink'
 
 export interface CorporationsProps {
   className?:string,
@@ -41,11 +42,13 @@ export default function Corporations({
         {corporations.map((item, index) => (
           <div key={index} className="border-l-2 border-yellow-200 pl-6 md:ml-8 ml-2 flex flex-col gap-2">
             <p className="p-large font-bold">{item.organization}</p>
-            <a className="after:!w-0" href={`https://${item.website}`} target="_blank">{item.website}</a>
+            <ExternalLink href={`https://${item.website}`} className="after:!w-0">
+              {item.website}
+            </ExternalLink>
             {item.socials && (
               <div className="flex md:gap-8 gap-2 md:flex-row flex-col">
                 {item.socials.map((social, idx) => (
-                  <a key={idx} className="group flex items-center gap-4 after:!w-0" href={social.link} target="_blank">
+                  <ExternalLink key={idx} href={social.link} className="group flex items-center gap-4 after:!w-0">
                     <span className="block w-6 h-6 mt-1.5">
                       {social.platform == 'Instagram' ? (
                         <Instagram />
@@ -54,7 +57,7 @@ export default function Corporations({
                       )}
                     </span>
                     <p>{social.name}</p>
-                  </a>
+                  </ExternalLink>
                 ))}
               </div>
             )}
