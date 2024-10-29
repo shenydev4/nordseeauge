@@ -1,23 +1,14 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react';
-import { Loader } from '@googlemaps/js-api-loader';
-import { useInView } from 'react-intersection-observer';
-import Check from './icons/Check'; // Assuming you have this component
+import React, { useEffect, useState } from 'react';
+import Check from './icons/Check';
 
-interface MapProps {
-  className?: string;
-  apiKey: string;
-  center: google.maps.LatLngLiteral;
-  markers: google.maps.MarkerOptions[];
-}
+export default function Map({
+  className,
+}:{
+  className?:string
+}) {
 
-const Map: React.FC<MapProps> = ({ className, apiKey, center, markers }) => {
-  const mapRef = useRef<HTMLDivElement>(null);
-  const [mapLoaded, setMapLoaded] = useState(false);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
   const [googleCookiesAccepted, setGoogleCookiesAccepted] = useState(false);
 
   useEffect(() => {
@@ -25,45 +16,13 @@ const Map: React.FC<MapProps> = ({ className, apiKey, center, markers }) => {
     setGoogleCookiesAccepted(hasAcceptedGoogleCookies === 'true');
   }, []);
 
-  useEffect(() => {
-    const loader = new Loader({
-      apiKey: apiKey,
-      version: 'weekly',
-      libraries: ['places'],
-    });
-
-    let map: google.maps.Map;
-
-    if (inView && !mapLoaded && googleCookiesAccepted) { 
-      loader.load().then(() => {
-        if (mapRef.current) {
-          map = new google.maps.Map(mapRef.current, {
-            center: center,
-            zoom: 8,
-          });
-
-          markers.forEach((marker) => {
-            new google.maps.Marker({ map, ...marker });
-          });
-        }
-      });
-      setMapLoaded(true);
-    }
-
-    return () => {
-      if (map) {
-        google.maps.event.clearInstanceListeners(map);
-      }
-    };
-  }, [apiKey, center, markers, inView, mapLoaded, googleCookiesAccepted]);
-
   const handleAccept = () => {
     localStorage.setItem('googleCookies', 'true');
     setGoogleCookiesAccepted(true);
   };
 
   return (
-    <div ref={ref} className={`relative ${className}`}>
+    <div className={`relative shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)] ${className}`}>
       
       {googleCookiesAccepted ? (
         <iframe src="https://www.google.com/maps/d/embed?mid=1PedFtYkmpicvKp95dtnVL1Vg4RR9tXw&ehbc=2E312F" className='aspect-video' width="100%" height="100%"></iframe>
@@ -87,5 +46,3 @@ const Map: React.FC<MapProps> = ({ className, apiKey, center, markers }) => {
     </div>
   );
 };
-
-export default Map;

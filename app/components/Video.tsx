@@ -31,7 +31,7 @@ export default function Video({
   };
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)] ${className}`}>
       {youtubeCookiesAccepted ? ( 
         <YouTube videoId="QF0EkWvoB74" opts={opts} className='aspect-video' iframeClassName='h-full w-full' />
       ) : (
