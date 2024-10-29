@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import Cross from '../icons/Cross'
 import Menu from '../icons/Menu'
+import Arrow from '../icons/Arrow'
 import Image from 'next/image'
 
 export default function Header() {
@@ -34,7 +35,7 @@ export default function Header() {
 
   return (
     <div id="Header" className='absolute z-50 w-full bg-gradient-to-b from-white/[0.3] to-transparent'>
-      <div className='container flex items-center justify-between py-6'>
+      <div className='container flex justify-between py-6'>
 
         <div>
           <a href="/" className={`block after:!w-0 hover:scale-110 relative w-[100px] h-[100px] duration-700 ${mobileMenuOpacity ? 'opacity-0':'opacity-100'}`}>
@@ -47,12 +48,47 @@ export default function Header() {
             />
           </a>
         </div>
-        <div className='xl:gap-12 md:gap-5 uppercase md:flex hidden'>
-          <a href="/angebot" className={`link-sm ${pathname == '/angebot' && 'text-yellow-200 after:!w-0'}`}>Angebot</a>
-          <a href="/neuigkeiten" className={`link-sm ${pathname == '/neuigkeiten' && 'text-yellow-200 after:!w-0'}`}>Neuigkeiten</a>
-          <a href="/galerie" className={`link-sm ${pathname == '/galerie' && 'text-yellow-200 after:!w-0'}`}>Galerie</a>
-          <a href="/ueber-uns" className={`link-sm ${pathname == '/ueber-uns' && 'text-yellow-200 after:!w-0'}`}>Über uns</a>
-          <a href="/kontakt" className={`link-sm ${pathname == '/kontakt' && 'text-yellow-200 after:!w-0'}`}>Kontakt</a>
+
+        <div className='xl:gap-12 md:gap-5 uppercase md:flex hidden mt-6'>
+          <a href="/buchung" className={`h-fit ${pathname === '/buchung' && 'text-yellow-200 after:!w-0'}`}>
+            Buchung
+          </a>
+
+          <div className="group relative h-fit hover:h-auto">
+            <div className='flex items-center gap-2'>
+              <a href="/galerie" className={`h-fit ${pathname === '/galerie' && 'text-yellow-200 after:!w-0'}`}>
+                Galerie
+              </a>
+              <span className='group-hover:rotate-180 duration-300 block w-5 h-5'>
+                <Arrow />
+              </span>
+            </div>
+            <div className="mt-2 duration-300 absolute top-10 left-0 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto">
+              <a href="/galerie/referenzen" className={`${pathname === '/referenzen' && 'text-yellow-200 after:!w-0'}`}>
+                Referenzen
+              </a>
+            </div>
+          </div>
+
+          <div className="group relative h-fit hover:h-auto">
+            <div className='flex items-center gap-2'>
+              <a href="/ueber-uns" className={`h-fit ${pathname === '/ueber-uns' && 'text-yellow-200 after:!w-0'}`}>
+                Über uns
+              </a>
+              <span className='group-hover:rotate-180 duration-300 block w-5 h-5'>
+                <Arrow />
+              </span>
+            </div>
+            <div className="mt-2 duration-300 absolute top-10 left-0 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto">
+              <a href="/ueber-uns/neuigkeiten" className={`${pathname === '/ueber-uns/neuigkeiten' && 'text-yellow-200 after:!w-0'}`}>
+                Neuigkeiten
+              </a>
+            </div>
+          </div>
+
+          <a href="/kontakt" className={`h-fit ${pathname === '/kontakt' && 'text-yellow-200 after:!w-0'}`}>
+            Kontakt
+          </a>
         </div>
 
         <div className='md:hidden h-10'>
@@ -61,13 +97,13 @@ export default function Header() {
           </button>
         </div>
 
-        <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh duration-700 p-8 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
+        <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh duration-700 py-6 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
           <div className='absolute w-full h-full top-0 left-0 -z-10'>
-            <img src="/bg-placeholder2.jpg" alt="" className='object-cover blur-sm h-full w-full scale-105 brightness-75'/>
+            <img src="/bg-placeholder2.jpg" alt="" className='object-cover blur h-full w-full scale-105 brightness-75'/>
           </div>
           <div className="container relative h-full flex flex-col">
             <div className='flex justify-between items-center'>
-              <a href="/" className='block after:!w-0 hover:scale-110 relative w-[170px] h-[170px]'>
+              <a href="/" className='block after:!w-0 hover:scale-110 relative w-[120px] h-[120px]'>
                 <Image
                   src='/logo.webp'
                   alt='NordseeAuge Logo'
@@ -80,16 +116,19 @@ export default function Header() {
                 <Cross />
               </button>
             </div>
-            <div className='flex flex-col gap-3 absolute top-1/2 -translate-y-1/2 mt-10'>
-              <a href="/angebot" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/angebot' && 'text-yellow-200'}`}>Angebot</a>
-              <a href="/neuigkeiten" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
-              <a href="/galerie" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
-              <a href="/ueber-uns" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
-              <a href="/kontakt" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
-            </div>
-            <div className='flex xl:gap-10 gap-6 mt-auto'>
-              <a href="/datenschutz" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Datenschutz</a>
-              <a href="/impressum" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Impressum</a>
+            <div className='h-full overflow-y-auto relative'>
+              <div className='flex flex-col h-full pt-4'>
+                <a href="/buchung" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/buchung' && 'text-yellow-200'}`}>Buchung</a>
+                <a href="/galerie" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
+                <a href="/galerie/referenzen" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie/referenzen' && 'text-yellow-200'}`}>Referenzen</a>
+                <a href="/ueber-uns" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
+                <a href="/ueber-uns/neuigkeiten" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
+                <a href="/kontakt" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
+                <div className='flex xl:gap-10 gap-6 mt-auto'>
+                  <a href="/datenschutz" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Datenschutz</a>
+                  <a href="/impressum" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Impressum</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

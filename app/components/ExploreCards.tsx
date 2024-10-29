@@ -17,21 +17,25 @@ export default function ExploreCards({
 
       <div className="w-full flex flex-wrap justify-center gap-y-3">
 
-        <a className={cardClasses} href="/angebot">
-          <h3 className={cardHeadlineClasses}>Angebot</h3>
+        <a className={cardClasses} href="/buchung">
+          <h3 className={cardHeadlineClasses}>Buchung</h3>
           <p className={cardCaptionClasses}>Unser Onlineshop, Smartphone Workshops und Buchungen</p>
-        </a>
-        <a className={cardClasses} href="/neuigkeiten">
-          <h3 className={cardHeadlineClasses}>Neuigkeiten</h3>
-          <p className={cardCaptionClasses}>Unsere Planungen für 2024 und vergangene Highlights</p>
         </a>
         <a className={cardClasses} href="/galerie">
           <h3 className={cardHeadlineClasses}>Galerie</h3>
           <p className={cardCaptionClasses}>Von uns bereits besuchte Orte</p>
         </a>
+        <a className={cardClasses} href="/galerie/referenzen">
+          <h3 className={cardHeadlineClasses}>Referenzen</h3>
+          <p className={cardCaptionClasses}>text</p>
+        </a>
         <a className={cardClasses} href="/ueber-uns">
           <h3 className={cardHeadlineClasses}>Über uns</h3>
           <p className={cardCaptionClasses}>Kooperationen, Equipment & zu meiner Person</p>
+        </a>
+        <a className={cardClasses} href="/ueber-uns/neuigkeiten">
+          <h3 className={cardHeadlineClasses}>Neuigkeiten</h3>
+          <p className={cardCaptionClasses}>Unsere Planungen für 2024 und vergangene Highlights</p>
         </a>
         <a className={cardClasses} href="/kontakt">
           <h3 className={cardHeadlineClasses}>Kontakt</h3>

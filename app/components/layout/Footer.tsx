@@ -31,7 +31,7 @@ export default function Footer() {
             </p>
           </div> 
           <div className='xl:w-1/5 w-full flex xl:flex-col xl:items-end xl:justify-center md:gap-10 gap-6 xl:mt-0 mt-8'>
-            <a href="./angebot" className="btn">Angebot</ a>
+            <a href="./buchung" className="btn">Buchung</ a>
             <a href="./kontakt" className="btn">Kontakt</a>
           </div>
 
@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="container z-10 relative py-6 flex flex-col">
           <div className='flex xl:justify-around md:items-center md:flex-row flex-row md:flex-nowrap flex-wrap xl:gap-0 md:gap-0 gap-y-8'>
             <div className='xl:w-1/4 flex flex-col xl:basis-none xl:basis-1/4 md:basis-1/3 w-1/3 md:order-1 order-2'>
-              <a href="/angebot" className='link-sm w-fit md:mx-auto'>Angebot</a>
+              <a href="/buchung" className='link-sm w-fit md:mx-auto'>Buchung</a>
               <a href="/neuigkeiten" className='link-sm w-fit md:mx-auto'>Neuigkeiten</a>
               <a href="/galerie" className='link-sm w-fit md:mx-auto'>Galerie</a>
               <a href="/ueber-uns" className='link-sm w-fit md:mx-auto'>Über uns</a>
