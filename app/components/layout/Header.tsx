@@ -56,16 +56,16 @@ export default function Header() {
 
           <div className="group relative h-fit hover:h-auto">
             <div className='flex items-center gap-2'>
-              <a href="/galerie" className={`h-fit ${pathname === '/galerie' && 'text-yellow-200 after:!w-0'}`}>
-                Galerie
+              <a href="/referenzen" className={`h-fit ${pathname === '/referenzen' && 'text-yellow-200 after:!w-0'}`}>
+                Referenzen
               </a>
               <span className='group-hover:rotate-180 duration-300 block w-5 h-5'>
                 <Arrow />
               </span>
             </div>
             <div className="mt-2 duration-300 absolute top-10 left-0 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto">
-              <a href="/galerie/referenzen" className={`${pathname === '/referenzen' && 'text-yellow-200 after:!w-0'}`}>
-                Referenzen
+              <a href="/galerie" className={`${pathname === '/galerie' && 'text-yellow-200 after:!w-0'}`}>
+                Galerie
               </a>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Header() {
           </button>
         </div>
 
-        <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh duration-700 py-6 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
+        <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh duration-700 py-2 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
           <div className='absolute w-full h-full top-0 left-0 -z-10'>
             <img src="/bg-placeholder2.jpg" alt="" className='object-cover blur h-full w-full scale-105 brightness-75'/>
           </div>
@@ -119,17 +119,17 @@ export default function Header() {
             <div className='h-full overflow-y-auto relative'>
               <div className='flex flex-col h-full pt-4'>
                 <a href="/buchung" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/buchung' && 'text-yellow-200'}`}>Buchung</a>
+                <a href="/referenzen" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie/referenzen' && 'text-yellow-200'}`}>Referenzen</a>
                 <a href="/galerie" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie' && 'text-yellow-200'}`}>Galerie</a>
-                <a href="/galerie/referenzen" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/galerie/referenzen' && 'text-yellow-200'}`}>Referenzen</a>
                 <a href="/ueber-uns" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/ueber-uns' && 'text-yellow-200'}`}>Über uns</a>
                 <a href="/ueber-uns/neuigkeiten" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/neuigkeiten' && 'text-yellow-200'}`}>Neuigkeiten</a>
                 <a href="/kontakt" className={`text-font-bebas !text-[42px] after:!w-0 font-bold [text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)] ${pathname == '/kontakt' && 'text-yellow-200'}`}>Kontakt</a>
-                <div className='flex xl:gap-10 gap-6 mt-auto'>
-                  <a href="/datenschutz" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Datenschutz</a>
-                  <a href="/impressum" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Impressum</a>
-                </div>
               </div>
             </div>
+              <div className='flex xl:gap-10 gap-6 mt-auto'>
+                <a href="/datenschutz" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Datenschutz</a>
+                <a href="/impressum" className='[text-shadow:_1px_-1px_6px_rgb(255_255_255_/_60%)]'>Impressum</a>
+              </div>
           </div>
         </div>
 
