@@ -157,9 +157,9 @@ ul {
   background: linear-gradient(to bottom, $primary, rgba($blue-1, 0.4));
 }
 .container {
-  max-width: unset !important;
   margin: 0 auto;
-  @include value(width, 1300px, 700px, 370px);
+  @include value(max-width, 1300px, 700px, 370px);
+  width: 100%;
 }
 
 

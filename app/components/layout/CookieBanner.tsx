@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Check from '../icons/Check';
 import Cross from '../icons/Cross';
 import Arrow from '../icons/Arrow';
+import Image from 'next/image';
 
 interface CookieBannerProps {
   calledFromFooter?: boolean;
@@ -77,9 +78,18 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
       <div className='w-full h-full fixed top-0 left-0 z-[1000] bg-black/[0.5] overflow-clip'>
         <div className="max-h-[90%] overflow-y-auto md:w-[650px] w-[90%] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded shadow-[0_0_12px_-2px_rgba(0,0,0,0.4)] bg-yellow-200 xl:p-10 md:p-8 p-6">
           
-          <p>
-            Diese Website verwendet Cookies, um Ihr Surferlebnis zu verbessern. Wenn Sie auf „akzeptieren“ klicken, erklären Sie sich mit der Verwendung von Cookies einverstanden.
-          </p>
+          <span className='flex items-center md:gap-3 gap-2'>
+            <h3>
+              Mit Cookies die See genießen
+            </h3>
+            <Image 
+              src='/cookies.png'
+              alt='Cookie Icon'
+              width={52}
+              height={52}
+              className='xl:w-14 xl:h-14 md:w-11 md:h-11 w-10 h-10'
+            />
+          </span>
 
           <div className="mt-8 text-2xl space-y-2">
 
@@ -97,8 +107,8 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
                 <Arrow />
               </span>
             </div>
-            <div className={`${necessaryOpen ? 'pb-4 max-h-20':'pb-0 max-h-0'} h-fit pl-8 overflow-hidden duration-500`}>
-              Hier müssen kurze genauere Erklärungen stehen
+            <div className={`${necessaryOpen ? 'pb-4 max-h-24':'pb-0 max-h-0'} xl:text-[20px] md:text-[18px] text-[16px]/[1.5] h-fit pl-8 overflow-hidden duration-500`}>
+              Die Speicherung Ihrer Cookie-Einstellungen müssen lokal in Ihrem Browser gespeichert werden.
             </div>
 
             <div className='flex gap-3 items-center'>
@@ -115,26 +125,26 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
                 <Arrow />
               </span>
             </div>
-            <div className={`${googleOpen ? 'pb-4 max-h-20':'pb-0 max-h-0'} h-fit pl-8 overflow-hidden duration-500`}>
-              Hier müssen kurze genauere Erklärungen stehen
+            <div className={`${googleOpen ? 'pb-4 max-h-32':'pb-0 max-h-0'} xl:text-[20px] md:text-[18px] text-[16px]/[1.5] h-fit pl-8 overflow-hidden duration-500`}>
+              Diese Website bindet eine Karte von Google Maps ein. Durch die Nutzung von Google Maps werden Daten an Google übertragen. Ihre Zustimmung ermöglicht die Anzeige dieser Karte.
             </div>
 
-            <div className='flex gap-3 items-center'>
+            <div className='flex items-center gap-3'>
               <input 
                 className='cursor-pointer w-5 h-5'
                 type="checkbox" 
                 checked={youtubeCookies} 
                 onChange={() => setYoutubeCookies(!youtubeCookies)} 
               />
-              <label className='cursor-pointer' onClick={() => toggleSetOpen(youtubeOpen, setYoutubeOpen)}>
+              <label className='cursor-pointer flex items-center gap-3' onClick={() => toggleSetOpen(youtubeOpen, setYoutubeOpen)}>
                 YouTube
+                <span className={`w-5 h-5 duration-300 mt-1.5 ${youtubeOpen ? 'rotate-0':'rotate-180'}`}>
+                  <Arrow />
+                </span>
               </label>
-              <span className={`w-5 h-5 duration-300 mt-1.5 ${youtubeOpen ? 'rotate-0':'rotate-180'}`}>
-                <Arrow />
-              </span>
             </div>
-            <div className={`${youtubeOpen ? 'pb-4 max-h-20':'pb-0 max-h-0'} h-fit pl-8 overflow-hidden duration-500`}>
-              Hier müssen kurze genauere Erklärungen stehen
+            <div className={`${youtubeOpen ? 'pb-4 max-h-32':'pb-0 max-h-0'} xl:text-[20px] md:text-[18px] text-[16px]/[1.5] h-fit pl-8 overflow-hidden duration-500`}>
+              Diese Website bindet Videos von YouTube ein. Durch die Nutzung von YouTube werden Daten an Google übertragen. Ihre Zustimmung ermöglicht die Anzeige von Videos.
             </div>
 
           </div>
@@ -142,13 +152,13 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
           <div className='mt-8 flex flex-col gap-2'>
 
             <div className='flex md:flex-row flex-col md:gap-5 gap-2'>
-              <button className='md:w-[calc(50%-10px)] w-2/3 border border-black py-1.5 px-3 font-bold rounded-sm flex items-center gap-2 duration-300 bg-green-300 hover:bg-yellow-100 text-base' onClick={handleAcceptAll}>
+              <button className='md:w-[calc(50%-10px)] w-full border border-green-800 py-1.5 px-3 font-bold rounded-[3px] flex items-center gap-2 duration-300 bg-green-300 hover:bg-green-400 text-base' onClick={handleAcceptAll}>
                 <span className='block w-5 h-5'>
                   <Check />
                 </span>
                 Alles akzeptieren
               </button>
-              <button className='md:w-[calc(50%-10px)] w-2/3 border border-black py-1.5 px-3 font-bold rounded-sm flex items-center gap-2 duration-300 bg-green-200 hover:bg-yellow-100 text-base' onClick={handleSelectionAccept}>
+              <button className='md:w-[calc(50%-10px)] w-full border border-teal-800 py-1.5 px-3 font-bold rounded-[3px] flex items-center gap-2 duration-300 bg-teal-200 hover:bg-teal-300 text-base' onClick={handleSelectionAccept}>
                 <span className='block w-5 h-5'>
                   <Check />
                 </span>
@@ -156,7 +166,7 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
               </button>
             </div>
             
-            <button className='md:w-[calc(50%-10px)] w-2/3 border border-black py-1.5 px-3 font-bold rounded-sm flex items-center gap-2 duration-300 bg-red-300 hover:bg-yellow-100 text-base' onClick={handleRejectAll}>
+            <button className='md:w-[calc(50%-10px)] w-full border border-red-800 py-1.5 px-3 font-bold rounded-[3px] flex items-center gap-2 duration-300 bg-red-300 hover:bg-red-400 text-base' onClick={handleRejectAll}>
               <span className='block w-5 h-5'>
                 <Cross />
               </span>
@@ -166,12 +176,12 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
           </div>
 
           <p className="caption mt-2">
-            Sie können Ihr Einverständnis jederzeit ändern.
+            Sie können Ihre Einwilligung jederzeit ändern.
           </p>
-          {/* <div className='space-x-5'>
-            <a href="/datenschutz" className='hover:!text-[#4b5563] hover:after:!bg-[#4b5563] after:!w-full hover:after:!w-[90%]'>Datenschutz</a>
-            <a href="/impressum" className='hover:!text-[#4b5563] hover:after:!bg-[#4b5563] after:!w-full hover:after:!w-[90%]'>Impressum</a>
-          </div> */}
+          <div className='space-x-5'>
+            <a href="/datenschutz" className='hover:!text-[#4b5563] hover:after:!bg-[#4b5563] after:!w-full hover:after:!w-[90%] !text-base'>Datenschutz</a>
+            <a href="/impressum" className='hover:!text-[#4b5563] hover:after:!bg-[#4b5563] after:!w-full hover:after:!w-[90%] !text-base'>Impressum</a>
+          </div>
 
         </div>
       </div>
