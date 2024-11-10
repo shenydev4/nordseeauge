@@ -14,10 +14,11 @@ export default function Home() {
   return (
     <>
       <Hero 
-        imgSrc="/hero-bg-1.jpg"
+        imgSrc="/bg-grass-1.jpg"
         imgAlt="Hero Image"
         captionIntro="Moin und Herzlich Willkommen bei der NordseeAuge Agentur."
         captionText="Erlebe hier exklusive Hintergründe, Planungen und Angebote rund um die Nordsee."
+        imgSize="70"
       />
 
       <div className="fluid-container">
@@ -33,6 +34,8 @@ export default function Home() {
 
           <Video 
             className="xl-space-after-3 space-after-1"
+            videoLink="https://www.youtube.com/watch?v=QF0EkWvoB74"
+            videoID="QF0EkWvoB74"
           />
 
         </div>

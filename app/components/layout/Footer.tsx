@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation'
 import CookieBanner from './CookieBanner';
 
 import Instagram from '@/app/components/icons/Instagram'
@@ -17,6 +18,8 @@ export default function Footer() {
   const handleShowCookieBanner = () => {
     setShowCookieBanner(true);
   };
+
+  const pathname = usePathname()
 
   return (
     <div id='Footer' className='mt-auto relative overflow-hidden bg-sky-500/[0.4]'>
@@ -67,11 +70,12 @@ export default function Footer() {
         <div className="container z-10 relative py-6 flex flex-col">
           <div className='flex xl:justify-around md:items-center md:flex-row flex-row md:flex-nowrap flex-wrap xl:gap-0 md:gap-0 gap-y-8'>
             <div className='xl:w-1/4 flex flex-col xl:basis-none xl:basis-1/4 md:basis-1/3 w-1/3 md:order-1 order-2'>
-              <a href="/buchung" className='link-sm w-fit md:mx-auto'>Buchung</a>
-              <a href="/neuigkeiten" className='link-sm w-fit md:mx-auto'>Neuigkeiten</a>
-              <a href="/galerie" className='link-sm w-fit md:mx-auto'>Galerie</a>
-              <a href="/ueber-uns" className='link-sm w-fit md:mx-auto'>Über uns</a>
-              <a href="/kontakt" className='link-sm w-fit md:mx-auto'>Kontakt</a>
+              <a href="/buchung" className={`link-sm w-fit md:mx-auto ${pathname === '/buchung' && 'text-yellow-200 after:!w-0'}`}>Buchung</a>
+              <a href="/referenzen" className={`link-sm w-fit md:mx-auto ${pathname === '/referenzen' && 'text-yellow-200 after:!w-0'}`}>Referenzen</a>
+              <a href="/galerie" className={`link-sm w-fit md:mx-auto ${pathname === '/galerie' && 'text-yellow-200 after:!w-0'}`}>Galerie</a>
+              <a href="/ueber-uns" className={`link-sm w-fit md:mx-auto ${pathname === '/ueber-uns' && 'text-yellow-200 after:!w-0'}`}>Über uns</a>
+              <a href="/ueber-uns/neuigkeiten" className={`link-sm w-fit md:mx-auto ${pathname === '/ueber-uns/neuigkeiten' && 'text-yellow-200 after:!w-0'}`}>Neuigkeiten</a>
+              <a href="/kontakt" className={`link-sm w-fit md:mx-auto ${pathname === '/kontakt' && 'text-yellow-200 after:!w-0'}`}>Kontakt</a>
             </div>
             <div className='xl:w-1/4 flex justify-center items-center xl:basis-1/4 md:basis-1/3 w-full md:order-2 order-1'>
               <a href="/" className='block after:!w-0 hover:scale-110 relative xl:w-[180px] xl:h-[180px] w-[120px] h-[120px]'>
