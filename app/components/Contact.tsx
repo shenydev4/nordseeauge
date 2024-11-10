@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '@/app/kontakt/contact.css'
 import Cross from './icons/Cross';
 import Letter from './icons/Letter';
@@ -24,6 +24,49 @@ export default function Contact({
   const [errorMessage, setErrorMessage] = useState()
   const [isOpenModal, setIsOpenModal] = useState(false)
 
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [isDataPrivacyChecked, setIsDataPrivacyChecked] = useState(false);
+
+  const validateForm = () => {
+    const { surname, prename, email, phoneNo, message } = formData;
+
+    const nameRegex = /^[a-zA-Z\u00C0-\u017F\-\s']+$/; 
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+
+    const isNameValid = nameRegex.test(surname) && nameRegex.test(prename);
+    const isEmailValid = emailRegex.test(email);
+
+    const areRequiredFieldsFilled = surname && prename && email && message;
+    
+    const isObjectSelected = formData.object !== '';
+    const isPhoneValid = !phoneNo || phoneRegex.test(phoneNo); 
+
+    return (
+      isNameValid &&
+      isEmailValid &&
+      isPhoneValid &&
+      areRequiredFieldsFilled &&
+      isDataPrivacyChecked &&
+      isObjectSelected
+    );
+  };
+
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    console.log("Updated formData:", { ...formData, [name]: value }); 
+  };
+  
+  useEffect(() => {
+    setIsSubmitDisabled(!validateForm());
+  }, [formData, isDataPrivacyChecked]);
+
+  const handleDataPrivacyChange = (e:any) => {
+    setIsDataPrivacyChecked(e.target.checked);
+    setIsSubmitDisabled(!validateForm());
+  };
+
   const handleSubmit = async (e:any) => {
     e.preventDefault();
 
@@ -40,7 +83,13 @@ export default function Contact({
             text: `Diesen Text sollte man nicht sehen können.`,
             html: `
             <html>
-              <head></head>
+              <head>
+                <style>
+                  .message-content {
+                    white-space: pre-line;
+                  }
+                </style>
+              </head>
               <body>
                 <h3>Dies ist eine automatisch generierte Email vom NordseeAuge Kontakt-Formular.</h3>
                 <p>
@@ -61,8 +110,8 @@ export default function Contact({
                 <p>
                   <b>Objekt: </b> ${formData.object}
                 </p>
-                <p stlyes='white-space: pre-wrap;'>
-                  <b>Nachricht:</b> ${formData.message}
+                <p class="message-content">
+                  <b>Nachricht:</b><br/> ${formData.message}
                 </p>
               </body>
             </html>`,
@@ -90,8 +139,8 @@ export default function Contact({
         </h3>
         <p className='mb-6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit beatae sint quas blanditiis neque quia commodi, aliquid vero possimus.</p>
         <p>
-          Alternativ können Sie uns auch direkt eine Email an <a href='mailto:info@nordseeauge.de' className='link-intext'>info@nordseeauge.de</a> schreiben.</p>
-        
+          Alternativ können Sie uns auch direkt eine Email an <a href='mailto:info@nordseeauge.de' className='link-intext'>info@nordseeauge.de</a> schreiben.
+        </p>
       </div>
 
       <form onSubmit={handleSubmit} className='basis-1/2 flex flex-col gap-4'>
@@ -100,30 +149,33 @@ export default function Contact({
           <input
             type="text"
             placeholder=""
+            name='company'
             value={formData.company}
-            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+            onChange={handleInputChange}
           />
         </div>
 
         <div className='flex gap-4 md:flex-row flex-col'>
           <div className='flex flex-col gap-1 md:basis-1/2'>
-            <label htmlFor="company">Nachname*</label>
+            <label htmlFor="surname">Nachname*</label>
             <input
               type="text"
               placeholder=""
+              name='surname'
               value={formData.surname}
-              onChange={(e) => setFormData({ ...formData, surname: e.target.value })}
+              onChange={handleInputChange}
               required
             />
           </div>
 
           <div className='flex flex-col gap-1 md:basis-1/2'>
-            <label htmlFor="company">Vorname*</label>
+            <label htmlFor="prename">Vorname*</label>
             <input
               type="text"
               placeholder=""
+              name='prename'
               value={formData.prename}
-              onChange={(e) => setFormData({ ...formData, prename: e.target.value })}
+              onChange={handleInputChange}
               required
             />
           </div>
@@ -131,33 +183,36 @@ export default function Contact({
 
         <div className='flex gap-4 md:flex-row flex-col'>
           <div className='flex flex-col gap-1 basis-1/2'>
-            <label htmlFor="company">Email*</label>
+            <label htmlFor="email">Email*</label>
             <input
               type="email"
               placeholder=""
+              name='email'
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={handleInputChange}
               required
             />
           </div>
 
           <div className='flex flex-col gap-1 basis-1/2'>
-            <label htmlFor="company">Telefon &#40;bei Rückruf Wunsch&#41;</label>
+            <label htmlFor="phoneNo">Telefon &#40;bei Rückruf Wunsch&#41;</label>
             <input
               type="text"
               placeholder=""
+              name='phoneNo'
               value={formData.phoneNo}
-              onChange={(e) => setFormData({ ...formData, phoneNo: e.target.value })}
+              onChange={handleInputChange}
             />
           </div>
 
         </div>
         <div className='flex flex-col gap-1'>
-          <label htmlFor="company">Was möchten Sie anfragen/buchen*</label>
+          <label htmlFor="object">Was möchten Sie anfragen/buchen*</label>
           <select 
             name="object"
-            id=""
-            onChange={(e) => setFormData({ ...formData, object: e.target.value })}
+            id="object"
+            value={formData.object}
+            onChange={handleInputChange}
           >
             <option value='- bitte auswählen -' hidden>- bitte auswählen -</option>
             <option value='Imagefilm, Video, Foto, Drohne'>Imagefilm, Video, Foto, Drohne</option>
@@ -170,20 +225,38 @@ export default function Contact({
         </div>
 
         <div className='flex flex-col gap-1'>
-          <label htmlFor="company">Anfrage*</label>
+          <label htmlFor="message">Anfrage*</label>
           <textarea
             placeholder=""
+            name="message"
             value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            onChange={handleInputChange}
             required
           />
         </div>
 
-        <button type="submit">Anfrage senden</button>
+        <div className="flex gap-2">
+          <input
+            className='w-5 h-5 mt-1'
+            type="checkbox"
+            id="dataPrivacy"
+            checked={isDataPrivacyChecked}
+            onChange={handleDataPrivacyChange}
+          />
+          <label htmlFor="dataPrivacy" className='!text-[18px]'>
+            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="" className='link-intext !text-[18px]'>Datenschutzerklärung</a> zu.
+          </label>
+        </div>
+
+        <p className="caption !text-[16px]">* Pflichtfelder</p>
+
+        <button type="submit" disabled={isSubmitDisabled} className={`${isSubmitDisabled && '!bg-gray-300 hover:!bg-gray-300'}`}> 
+          Anfrage senden
+        </button>
       </form>
 
       {isOpenModal && (
-        <div className='fixed z-50 top-1/2 left-1/2 flex flex-col gap-6 py-8 px-14 bg-white w-fit max-w-[800px] -translate-y-1/2 -translate-x-1/2 rounded shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)]'>
+        <div className='fixed z-50 top-1/2 left-1/2 flex flex-col gap-6 py-8 px-14 bg-yellow-200 w-fit max-w-[800px] -translate-y-1/2 -translate-x-1/2 rounded shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)]'>
           <div className='flex justify-between items-center'>
             <p className='caption'>Formularübermittlung</p>
             <span 
