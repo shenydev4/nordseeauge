@@ -40,7 +40,7 @@ export default function Corporations({
 
       <div className="mt-8 space-y-10">
         {corporations.map((item, index) => (
-          <div key={index} className="border-l-2 border-yellow-200 md:pl-6 pl-4 md:ml-8 flex flex-col gap-2">
+          <div key={index} className="border-l-2 border-yellow-200 md:pl-6 pl-4 flex flex-col gap-2">
             <p className="p-large font-bold">{item.organization}</p>
             <ExternalLink href={`https://${item.website}`} className="after:!w-0 md:!text-[22px] !text-[18px] underline underline-offset-2">
               {item.website}
