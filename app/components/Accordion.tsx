@@ -9,7 +9,7 @@ interface Product {
   category: string;
   software?: string;
   notice?: string;
-  items: { productName: string; link: string }[];
+  items: { productName: string; link?: string }[];
 }
 
 const products: Product[] = [
@@ -68,6 +68,14 @@ const products: Product[] = [
         productName: 'NEEWER Kristallkugel Set',
         link: 'https://amzn.to/3Tux98E'
       },
+      {
+        productName: 'PROfezzion Lensball Stativ Kit',
+        link: 'https://amzn.to/4davMTz'
+      },
+      {
+        productName: 'Glaskugel Ständer für Fotografi',
+        link: 'https://amzn.to/3B9tW8k'
+      },
     ]
   },
   {
@@ -98,7 +106,6 @@ const products: Product[] = [
       },
       {
         productName: 'Objektive',
-        link: 'https://amzn.to/47nBpMQ'
       },
       {
         productName: 'RF 24-105mm',
@@ -177,8 +184,8 @@ const AccordionBuilder = ({
         className="w-full py-2 text-left font-bold"
         onClick={handleClick}
       >
-        <div className={`flex gap-6 items-center hover:text-yellow-200 transition-custom ${isOpen && 'text-yellow-200'}`}>
-          <span className={`block w-6 h-6 mt-1 ${isOpen ? 'rotate-0 text-yellow-200':'-rotate-45'}`}>
+        <div className={`flex gap-6 items-center md:hover:text-yellow-200 duration-300 ${isOpen && 'text-yellow-200'}`}>
+          <span className={`block w-6 h-6 mt-1 transition-transform duration-300 ${isOpen ? 'rotate-0 text-yellow-200':'-rotate-45'}`}>
             <Cross />
           </span>
           <p>
@@ -238,15 +245,33 @@ export default function Accordion({
             isOpen={activeIndex === index}
             setIsOpen={() => handleAccordionClick(index)}
           >
-            <div className="flex flex-col gap-5 py-4 pl-8">
+            <div className="flex flex-col md:gap-5 gap-3 py-3 pl-8">
               {product.software && (
                 <p className="caption">Software: {product.software}</p>
               )}
               {product.items.map((item, itemIndex) => (
-                <ExternalLink key={itemIndex} href={item.link} className="w-fit after:!w-0">
-                  {item.productName}
-                </ExternalLink>
+                <>
+                  {item.link ? (
+                    <ExternalLink key={itemIndex} href={item.link} className="w-fit after:!w-0 md:!text-[22px] !text-[18px]">
+                      {item.productName}
+                    </ExternalLink>
+                  ):(
+                    <p key={itemIndex} className="w-fit caption">
+                      {item.productName}:
+                    </p>
+                  )}
+                </>
               ))}
+              {product.notice && (
+                <div>
+                  <p className="caption !text-red-700">
+                    ! Achtung: Haftpflichtversicherung notwendig
+                  </p>
+                  <p className="caption">
+                    Registrierung im Luftfahrtbundesamt. Die Drohne ist mit zugeteilter ID zu kennzeichnen.
+                  </p>
+                </div>
+              )}
             </div>
           </AccordionBuilder>
         ))}

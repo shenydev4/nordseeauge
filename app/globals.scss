@@ -91,7 +91,7 @@ a {
 
   &:not(.card) {
     &:not(.btn):hover::after {
-      width: 90%;
+      @include value(width, 90%, 90%, 100%);
       background-color: $accent;
     }
   
@@ -113,7 +113,7 @@ a {
     }
   
     &:hover {
-     color: $accent;
+     @include value(color, $accent, $accent, auto);
     }
   }
 }
@@ -154,7 +154,7 @@ ul {
 }
 
 .fluid-container {
-  background: linear-gradient(to bottom, $primary, rgba($blue-1, 0.4));
+  background: linear-gradient(to top, $primary, rgba($blue-1, 0.4));
 }
 .container {
   margin: 0 auto;
@@ -243,4 +243,10 @@ ul {
 
 .xl-space-after-4 {
   @include value-xl(margin-bottom, 160px);
+}
+
+input[type="checkbox"] {
+  &:focus {
+    outline: none;
+  }
 }

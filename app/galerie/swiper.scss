@@ -1,3 +1,5 @@
+@import './../settings';
+
 @mixin element-color($color) {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#{$color}" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>');
 }
@@ -6,7 +8,10 @@
   &-pagination {
     background-color: gray;
     width: fit-content;
-    position: absolute; top: -48px; left: 88px;
+    position: absolute;
+    top: -48px;
+    @include value(left, 88px, 88px, 50%);
+    @include value-xs(transform, translateX(-50%));
     display: flex;
     gap: 6px;
     padding: 6px;
@@ -63,18 +68,39 @@
 
       &:hover {
         cursor: pointer;
-
-        &::after {
-          @include element-color(rgb(254 240 138));
+        @media ( min-width: 768px ) {
+          &::after {
+            @include element-color(rgb(254 240 138));
+          }
         }
       } 
     }
-
+ 
     &-next {
-      left: 44px;
+      @include value(left, 44px, 44px, unset);
+      @include value-xs(right, 0);
     }
     &-prev::after {
       transform: rotate(180deg);
+    }
+  }
+
+  &-loading-placeholder {
+    animation: loading 2s ease-in-out 0s infinite forwards;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-bottom: 3px dotted $accent;
+    border-left: 3px solid $accent;
+    border-radius: 50%;
+
+    @keyframes loading {
+      from { 
+        transform: rotate(0deg); 
+      }
+      to { 
+        transform: rotate(360deg); 
+      }
     }
   }
 }

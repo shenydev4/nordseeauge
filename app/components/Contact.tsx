@@ -197,7 +197,7 @@ export default function Contact({
           <div className='flex flex-col gap-1 basis-1/2'>
             <label htmlFor="phoneNo">Telefon &#40;bei Rückruf Wunsch&#41;</label>
             <input
-              type="text"
+              type="tel"
               placeholder=""
               name='phoneNo'
               value={formData.phoneNo}
@@ -244,7 +244,7 @@ export default function Contact({
             onChange={handleDataPrivacyChange}
           />
           <label htmlFor="dataPrivacy" className='!text-[18px]'>
-            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="" className='link-intext !text-[18px]'>Datenschutzerklärung</a> zu.
+            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="" className='link-intext !text-[18px]'>Datenschutzerklärung</a> zu.*
           </label>
         </div>
 

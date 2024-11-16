@@ -40,16 +40,16 @@ export default function Corporations({
 
       <div className="mt-8 space-y-10">
         {corporations.map((item, index) => (
-          <div key={index} className="border-l-2 border-yellow-200 pl-6 md:ml-8 ml-2 flex flex-col gap-2">
+          <div key={index} className="border-l-2 border-yellow-200 md:pl-6 pl-4 md:ml-8 flex flex-col gap-2">
             <p className="p-large font-bold">{item.organization}</p>
-            <ExternalLink href={`https://${item.website}`} className="after:!w-0">
+            <ExternalLink href={`https://${item.website}`} className="after:!w-0 md:!text-[22px] !text-[18px] underline underline-offset-2">
               {item.website}
             </ExternalLink>
             {item.socials && (
               <div className="flex md:gap-8 gap-2 md:flex-row flex-col">
                 {item.socials.map((social, idx) => (
-                  <ExternalLink key={idx} href={social.link} className="group flex items-center gap-4 after:!w-0">
-                    <span className="block w-6 h-6 mt-1.5">
+                  <ExternalLink key={idx} href={social.link} className="group flex items-center md:gap-4 gap-3 after:!w-0">
+                    <span className="block md:w-6 w-5 md:h-6 h-5 mt-1.5">
                       {social.platform == 'Instagram' ? (
                         <Instagram />
                       ):(

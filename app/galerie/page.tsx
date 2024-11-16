@@ -18,7 +18,8 @@ export default function Home() {
         imgAlt="Hero Image"
         captionIntro="Moin und Herzlich Willkommen bei der NordseeAuge Agentur."
         captionText="Erlebe hier exklusive Hintergründe, Planungen und Angebote rund um die Nordsee."
-        imgSize="70"
+        imgXShift="0"
+        imgYShift="1"
       />
 
       <div className="fluid-container">

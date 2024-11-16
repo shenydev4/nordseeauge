@@ -197,8 +197,22 @@ a.text-font-bebas {
   letter-spacing: 3px;
 }
 a:not(.card):not(.btn):hover::after {
-  width: 90%;
   background-color: rgb(254, 240, 138);
+}
+@media (min-width: 1400px) {
+  a:not(.card):not(.btn):hover::after {
+    width: 90%;
+  }
+}
+@media (max-width: 1399px) {
+  a:not(.card):not(.btn):hover::after {
+    width: 90%;
+  }
+}
+@media (max-width: 767px) {
+  a:not(.card):not(.btn):hover::after {
+    width: 100%;
+  }
 }
 a:not(.card)::after {
   content: "";
@@ -215,8 +229,20 @@ a:not(.card)::after {
 a:not(.card).link-intext::after {
   width: 100%;
 }
-a:not(.card):hover {
-  color: rgb(254, 240, 138);
+@media (min-width: 1400px) {
+  a:not(.card):hover {
+    color: rgb(254, 240, 138);
+  }
+}
+@media (max-width: 1399px) {
+  a:not(.card):hover {
+    color: rgb(254, 240, 138);
+  }
+}
+@media (max-width: 767px) {
+  a:not(.card):hover {
+    color: auto;
+  }
 }
 
 .btn {
@@ -335,7 +361,7 @@ ul li {
 }
 
 .fluid-container {
-  background: linear-gradient(to bottom, rgb(96, 165, 250), rgba(14, 165, 233, 0.4));
+  background: linear-gradient(to top, rgb(96, 165, 250), rgba(14, 165, 233, 0.4));
 }
 
 .container {
@@ -456,4 +482,8 @@ ul li {
   .xl-space-after-4 {
     margin-bottom: 160px;
   }
+}
+
+input[type=checkbox]:focus {
+  outline: none;
 }/*# sourceMappingURL=globals.css.map */

@@ -16,9 +16,9 @@ export default function Slider({
 }) {
 
   return (
-    <div className={`${className} overflow-hidden flex xl:flex-row flex-col justify-between xl:gap-0 md:gap-12 gap-6`}>
+    <div className={`${className} overflow-hidden flex md:flex-row flex-col justify-between md:items-center xl:gap-0 md:gap-12 gap-6`}>
 
-      <div className='xl:w-[450px]'>
+      <div className='xl:w-3/5 md:w-1-2'>
         <h2 className='mb-6'>
           Ein paar Highlights
         </h2>
@@ -29,18 +29,18 @@ export default function Slider({
             <span className="block w-6 h-6 mt-1.5">
               <Instagram />
             </span>
-            <p>nordseeauge</p>
+            <p className='underline'>nordseeauge</p>
           </ExternalLink>
           <ExternalLink href="https://shop.nordseeauge.de/?l=de" className="flex items-center gap-3 after:!w-0">
             <span className="block w-6 h-6 mt-1.5">
               <Shop />
             </span>
-            <p>shop</p>
+            <p className='underline'>shop</p>
           </ExternalLink>
         </div>
       </div>
       
-      <div className='xl:w-[800px] xl:ml-[50px] py-[72px] overflow-hidden'>
+      <div className='xl:w-2/5 md:w-1-2 xl:ml-[50px] pt-[72px] overflow-hidden'>
         <Swiper
           className='!overflow-visible'
           modules={[Navigation, Pagination]}
@@ -52,32 +52,169 @@ export default function Slider({
           pagination={{ clickable: true }}
           keyboard={{ enabled: true, }}
         >
-          <SwiperSlide className='w-full aspect-video my-auto'>
-            <div className='aspect-video'>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
               <Image 
-                src='/slider-2.jpg'
+                src='/swiper-image-1.jpeg'
                 alt='image'
                 fill
                 className='object-contain'
               />
             </div>
           </SwiperSlide>
-
-          <SwiperSlide className='w-full aspect-video my-auto'>
-            <div className='aspect-video'>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
               <Image 
-                src='/slider-1.jpg'
+                src='/swiper-image-2.jpg'
                 alt='image'
                 fill
                 className='object-contain'
               />
             </div>
           </SwiperSlide>
-
-          <SwiperSlide className='w-full aspect-video my-auto'>
-            <div className='aspect-video'>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
               <Image 
-                src='/slider-3.jpg'
+                src='/swiper-image-3.jpg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-4.jpg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-5.jpg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-6.jpeg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-7.jpeg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-8.jpeg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-9.jpeg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-10.jpg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-11.jpg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-12.jpg'
+                alt='image'
+                fill
+                className='object-contain'
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='w-full aspect-[0.8] my-auto rounded overflow-hidden'>
+            <span className='absolute w-full h-full flex items-center justify-center'>
+              <span className='swiper-loading-placeholder'></span>
+            </span>
+            <div className='aspect-[0.8]'>
+              <Image 
+                src='/swiper-image-13.jpg'
                 alt='image'
                 fill
                 className='object-contain'
