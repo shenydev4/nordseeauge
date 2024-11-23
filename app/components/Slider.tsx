@@ -14,7 +14,6 @@ const images: string[] = [
   "/swiper-image-2.jpg",
   "/swiper-image-3.jpg",
   "/swiper-image-4.jpg",
-  "/swiper-image-5.jpg",
   "/swiper-image-6.jpeg",
   "/swiper-image-7.jpeg",
   "/swiper-image-8.jpeg",
