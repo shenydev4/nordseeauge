@@ -101,7 +101,7 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
                 disabled
               />
               <label className='cursor-pointer flex items-center gap-3' onClick={() => toggleSetOpen(necessaryOpen, setNecessaryOpen)}>
-                Notwendige Cookies
+                Technisch Notwendige Cookies
                 <span className={`w-5 h-5 duration-300 mt-1.5 ${necessaryOpen ? 'rotate-0':'rotate-180'}`}>
                   <Arrow />
                 </span>
