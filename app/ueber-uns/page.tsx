@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "@nordseeauge | über uns",
-  description: "description",
+  title: "@nordseeauge | Über uns",
+  description: "Erfahre mehr über die Philosophie und die Person hinter dem Unternehmen. Entdecke das verwendete Equipment und lerne Kooperationspartner kennen.",
 };
 
 import Hero from '../components/layout/Hero';

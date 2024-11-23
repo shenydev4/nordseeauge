@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "@nordseeauge | Galerie",
-  description: "description",
+  description: "Begeben Sie sich auf eine visuelle Reise und entdecken Sie die Orte, die wir bereits besucht haben. Unsere Galerie bietet Ihnen einen Einblick in unsere Arbeit und die Schönheit der Nordsee.",
 };
 
 import Hero from '../components/layout/Hero';

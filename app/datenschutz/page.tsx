@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "@nordseeauge | Datenschutz",
-  description: "description",
+  description: "Diese Seite informiert Sie über unsere Datenschutzrichtlinien, den Umgang mit Ihren personenbezogenen Daten und Ihre Rechte im Rahmen der Datenschutzgrundverordnung (DSGVO).",
 };
 
 import Hero from '../components/layout/Hero';

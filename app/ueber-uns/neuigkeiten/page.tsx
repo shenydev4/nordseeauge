@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "@nordseeauge | Neuigkeiten",
-  description: "description",
+  description: "Bleiben Sie auf dem Laufenden! Hier finden Sie aktuelle Neuigkeiten, vergangene Highlights und unsere Planungen für 2024.",
 };
 
 import Hero from '@/app/components/layout/Hero';

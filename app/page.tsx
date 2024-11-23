@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "@nordseeauge",
-  description: "description",
+  description: " Nordseeauge - Wir unterstützen gemeinnützige Projekte und Unternehmen rund um die Nordsee! Erweitern Sie Ihre Reichweite durch gezielte Vernetzung und Promotion in unserem Netzwerk. Entdecken Sie unser Workshop, Galerien und vieles mehr!",
 };
 
 import Hero from '@/app/components/layout/Hero';

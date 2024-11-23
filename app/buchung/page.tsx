@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "@nordseeauge | Buchung",
-  description: "description",
+  description: "Entdecken Sie unsere Smartphone Workshops und den Onlineshop. Hier finden Sie eine Auswahl an Produkten und Dienstleistungen rund um die Fotografie. Buchen Sie jetzt Ihren Workshop oder stöbern Sie in unserem Shop!",
 };
 
 import Hero from '@/app/components/layout/Hero';

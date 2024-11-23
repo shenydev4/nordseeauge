@@ -29,8 +29,8 @@ export default function Footer() {
 
           <div className='xl:w-4/5 w-full'>
             <p className='p-large font-bold xl:mb-12 mb-6'>Sie haben ein gemeinnütziges Projekt oder Unternehmen?</p>
-            <p>Reichweite erweitern - für gemeinnützige Projekte/Unternehmen rund um die Nordsee, durch gezielte Vernetzung und Promotion in unserem Netzwerk. Unser Beitrag ist es unter anderem, dieses kostenlos für Sie umzusetzen (Nach Verfügbarkeit) und so derartige Projekte bekannter zu machen und zu unterstützen.
-              <br/><br/>Wenn Sie Fragen haben oder etwas buchen möchten, nehmen Sie  gerne <a href='./kontakt' className='link-intext'>Kontakt</a> zu mir auf oder besuchen meinen <ExternalLink href="https://shop.nordseeauge.de/?l=de" className="link-intext">Shop</ExternalLink>.
+            <p>Erweitern Sie Ihre Reichweite! Wir unterstützen gemeinnützige Projekte und Unternehmen rund um die Nordsee durch gezielte Vernetzung und Promotion in unserem Netzwerk.  Wir helfen Ihnen dabei, Ihre Projekte bekannter zu machen und setzen uns dafür ein, dass Ihre wertvolle Arbeit die Aufmerksamkeit erhält, die sie verdient.
+              <br/><br/>Wenn Sie Fragen haben oder mehr über unsere Leistungen erfahren möchten, nehmen Sie gerne <a href='./kontakt' className='link-intext'>Kontakt</a> zu mir auf oder besuchen Sie unseren <ExternalLink href="https://shop.nordseeauge.de/?l=de" className="link-intext">Shop</ExternalLink>.
             </p>
           </div> 
           <div className='xl:w-1/5 w-full flex xl:flex-col xl:items-end xl:justify-center md:gap-10 gap-6 xl:mt-0 mt-8'>

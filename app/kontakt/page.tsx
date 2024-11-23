@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "@nordseeauge | Kontakt",
-  description: "description",
+  description: "Sie haben Fragen oder möchten ein Angebot anfordern? Kontaktieren Sie uns einfach und schnell über unser Kontaktformular. Wir freuen uns auf Ihre Nachricht!",
 };
 
 import Hero from '../components/layout/Hero';

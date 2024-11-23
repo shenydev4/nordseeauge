@@ -19,27 +19,27 @@ export default function ExploreCards({
 
         <a className={cardClasses} href="/buchung">
           <h3 className={cardHeadlineClasses}>Buchung</h3>
-          <p className={cardCaptionClasses}>Unser Onlineshop, Smartphone Workshops und Buchungen</p>
+          <p className={cardCaptionClasses}>Workshops, Shop & mehr - Jetzt buchen!</p>
         </a>
         <a className={cardClasses} href="/galerie">
           <h3 className={cardHeadlineClasses}>Galerie</h3>
-          <p className={cardCaptionClasses}>Von uns bereits besuchte Orte</p>
+          <p className={cardCaptionClasses}>Entdecke unsere Bilderwelten!</p>
         </a>
         <a className={cardClasses} href="/galerie/referenzen">
           <h3 className={cardHeadlineClasses}>Referenzen</h3>
-          <p className={cardCaptionClasses}>text</p>
+          <p className={cardCaptionClasses}>lorem ipsum</p>
         </a>
         <a className={cardClasses} href="/ueber-uns">
           <h3 className={cardHeadlineClasses}>Über uns</h3>
-          <p className={cardCaptionClasses}>Kooperationen, Equipment & zu meiner Person</p>
+          <p className={cardCaptionClasses}>Wer steckt dahinter? Lerne uns kennen!</p>
         </a>
         <a className={cardClasses} href="/ueber-uns/neuigkeiten">
           <h3 className={cardHeadlineClasses}>Neuigkeiten</h3>
-          <p className={cardCaptionClasses}>Unsere Planungen für 2024 und vergangene Highlights</p>
+          <p className={cardCaptionClasses}>Immer up-to-date: News & Events</p>
         </a>
         <a className={cardClasses} href="/kontakt">
           <h3 className={cardHeadlineClasses}>Kontakt</h3>
-          <p className={cardCaptionClasses}>Nehmen Sie einfach und schnell Kontakt zu uns auf</p>
+          <p className={cardCaptionClasses}>Fragen? Wir sind für Sie da!</p>
         </a>
 
       </div>

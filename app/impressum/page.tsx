@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "@nordseeauge | Impressum",
-  description: "description",
+  description: "Hier finden Sie die gesetzlich vorgeschriebenen Angaben zu unserem Unternehmen, wie Anbieterkennzeichnung, Kontaktinformationen und Verantwortlichkeiten gemäß Telemediengesetz (TMG).",
 };
 
 import Hero from '../components/layout/Hero';
