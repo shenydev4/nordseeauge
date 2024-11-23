@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 import Hero from '../components/layout/Hero';
 import ExternalLink from '@/app/components/typo/ExternalLink'
 import '@/app/datenschutz/datenschutz.css'
+import EncodeMail from "../components/typo/EncodeMail";
 
 export default function Home() {
   return (
@@ -154,8 +155,9 @@ export default function Home() {
           </p><br/>
 
           <p>
+            {/* TODO: Im Datenschutz ganz raus?? sonst Festnetznummer */}
             Telefon: <a href="tel:+4901752147984">+49 0 175 2147984</a><br/>
-            E-Mail: <a href="mailto:info@nordseeauge.de">info@nordseeauge.de</a>
+            E-Mail: <EncodeMail mail='info@nordseeauge.de'/>
           </p><br/>
 
           <p>
@@ -679,7 +681,7 @@ export default function Home() {
           </p><br/>
 
           <p>
-            Technische Umsetzung der Website: <a href="mailto:Alexander.Dretvic@proton.me">Alexander.Dretvic@proton.me</a>
+            Technische Umsetzung der Website: <EncodeMail mail='Alexander.Dretvic@proton.me'/>
           </p>
         
         </div>

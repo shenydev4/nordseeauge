@@ -53,6 +53,9 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ message: 'Die Email wurde erfolgreich versendet.', info }, { status: 200 });
     } catch (error: any) {
         console.error('Error sending email:', error);
-        return NextResponse.json({ message: 'Leider gab es einen Fehler bei der Formularübermittlung. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine Mail an info@nordseeauge.de', error: error.message }, { status: 500 });
+        return NextResponse.json({ 
+            message: 'Leider gab es einen Fehler bei der Formularübermittlung. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine Mail an \u0069\u006e\u0066\u006f\u0040\u006e\u006f\u0072\u0064\u0073\u0065\u0065\u0061\u0075\u0067\u0065\u002e\u0064\u0065', 
+            error: error.message 
+        }, { status: 500 });
     }
 }

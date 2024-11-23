@@ -38,7 +38,7 @@ export default function Header() {
       <div className='container flex justify-between md:py-6 pt-2 pb-4'>
 
         <div className='flex items-center justify-between md:w-fit w-full'>
-          <a href="/" className={`block after:!w-0 hover:scale-110 relative md:w-[100px] xl:h-[130px] xl:w-[130px] md:h-[100px] w-[150px] h-[150px] duration-500 ${mobileMenuOpacity ? 'opacity-0':'opacity-100'}`}>
+          <a href="/" className={`block after:!w-0 hover:scale-110 relative md:w-[100px] xl:h-[130px] xl:w-[130px] md:h-[100px] w-[150px] h-[150px] duration-500 ${mobileMenuOpacity ? 'opacity-0':'opacity-100'}`} style={{ background: 'radial-gradient(rgba(255, 255, 255, 0.4), transparent 70%)' }}>
             <Image
               src='/logo.webp'
               alt='NordseeAuge Logo'
@@ -104,7 +104,7 @@ export default function Header() {
           </div>
           <div className="container relative h-full flex flex-col">
             <div className='flex justify-between items-center'>
-              <a href="/" className='block after:!w-0 hover:scale-110 relative w-[150px] h-[150px]'>
+              <a href="/" className='block after:!w-0 hover:scale-110 relative w-[150px] h-[150px]' style={{ background: 'radial-gradient(rgba(255, 255, 255, 0.4), transparent 70%)' }}>
                 <Image
                   src='/logo.webp'
                   alt='NordseeAuge Logo'

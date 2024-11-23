@@ -5,6 +5,7 @@ export const metadata: Metadata = {
 };
 
 import Hero from '../components/layout/Hero';
+import EncodeMail from "../components/typo/EncodeMail";
 
 export default function Home() {
   return (
@@ -42,11 +43,11 @@ export default function Home() {
           </h3>
 
           <p>
+            {/* TODO: Im Impressum soll nur die Festnetz */}
             Telefon: <a href="tel:4944194510673" className="link-intext">+49-441-94510673</a>
             <br/>
-            E-Mail: <a href="mailto:info@nordseeauge.de" className="link-intext">info(at)nordseeauge(dot)de</a>
+            E-Mail: <EncodeMail mail='info@nordseeauge.de'/>
           </p>
-          <p className="caption">Notiz: das (at)(dot) muss nicht, ist empholen wegen daten-crawlern, aber ich lass es mal bis wir live gehen aufjedenfall so</p>
 
           <h3 className="xl:mb-8 md:mb-6 mb-4 xl:mt-14 md:mt-12 mt-10">
             Redaktionell verantwortlich

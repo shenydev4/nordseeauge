@@ -10,6 +10,7 @@ import Facebook from '@/app/components/icons/Facebook'
 import LinkedIn from '@/app/components/icons/LinkedIn'
 import Image from 'next/image'
 import ExternalLink from '@/app/components/typo/ExternalLink'
+import EncodeMail from '../typo/EncodeMail';
 
 export default function Footer() {
 
@@ -78,7 +79,7 @@ export default function Footer() {
               <a href="/kontakt" className={`link-sm w-fit md:mx-auto ${pathname === '/kontakt' && 'text-yellow-200 after:!w-0'}`}>Kontakt</a>
             </div>
             <div className='xl:w-1/4 flex justify-center items-center xl:basis-1/4 md:basis-1/3 w-full md:order-2 order-1'>
-              <a href="/" className='block after:!w-0 hover:scale-110 relative xl:w-[180px] xl:h-[180px] w-[120px] h-[120px]'>
+              <a href="/" className='block after:!w-0 hover:scale-110 relative xl:w-[180px] xl:h-[180px] w-[120px] h-[120px]' style={{ background: 'radial-gradient(rgba(255, 255, 255, 0.4), transparent 70%)' }}>
                 <Image
                   src='/logo.webp'
                   alt='NordseeAuge Logo'
@@ -91,7 +92,7 @@ export default function Footer() {
             <div className='xl:w-1/4 flex flex-col justify-center xl:basis-1/4 md:basis-1/3 w-2/3 md:order-3 order-3'>
               <p className='mx-auto'>@nordseeauge</p>
               <p className='mx-auto'>26125 Oldenburg</p>
-              <a className='mx-auto' href='MAILTO:info@nordseeauge.de'>info@nordseeauge.de</a>
+              <p className='mx-auto'><EncodeMail mail='info@nordseeauge.de'/></p>
             </div>
           </div>
           <div className='flex md:flex-row flex-col md:items-center md:justify-between pt-10 md:gap-0 gap-2'>

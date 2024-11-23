@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import '@/app/kontakt/contact.css'
 import Cross from './icons/Cross';
 import Letter from './icons/Letter';
+import EncodeMail from './typo/EncodeMail';
 
 export default function Contact({
   className
@@ -139,7 +140,7 @@ export default function Contact({
         </h3>
         <p className='mb-6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit beatae sint quas blanditiis neque quia commodi, aliquid vero possimus.</p>
         <p>
-          Alternativ können Sie uns auch direkt eine Email an <a href='mailto:info@nordseeauge.de' className='link-intext'>info@nordseeauge.de</a> schreiben.
+          Alternativ können Sie uns auch direkt eine Email an <EncodeMail mail='info@nordseeauge.de'/> schreiben.
         </p>
       </div>
 
