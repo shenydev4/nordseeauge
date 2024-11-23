@@ -5,6 +5,8 @@ export const metadata: Metadata = {
 };
 
 import Hero from '../components/layout/Hero';
+import ExternalLink from '@/app/components/typo/ExternalLink'
+import '@/app/datenschutz/datenschutz.css'
 
 export default function Home() {
   return (
@@ -19,18 +21,20 @@ export default function Home() {
       />
 
       <div className="fluid-container">
-        <div className="container xl-space-before-3 space-before-1 xl-space-after-3 space-after-2" id="Datenschutz">
+        <div className="container xl-space-before-3 space-before-1 xl-space-after-3 space-after-2 flex flex-col" id="Datenschutz">
+
+          <p className="caption">
+            // Falls nachher ein anderer Host verwendet wird, dann muss "2. Hosting" geupdatet werden<br/>
+            // Await Antwort, ob tel & email aktuell sind
+          </p>
 
           <h1 className="xl:mb-16 md:mb-12 mb-10">
             Datenschutz
           </h1>
-
-          <p className="caption">// work in progress</p>
           
-          {/* TODO: Alles durchgehen, styles, html entities bei Bedarf, links (External Link?), content prüfen */}
-          <h2>1. Datenschutz auf einen Blick</h2>
+          <h2 className="!mt-0">1. Datenschutz auf einen Blick</h2>
 
-          <h3>Allgemeine Hinweise</h3>
+          <h3 className="!mt-0">Allgemeine Hinweise</h3>
           
           <p>
             Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, 
@@ -41,7 +45,7 @@ export default function Home() {
 
           <h3>Datenerfassung auf dieser Website</h3>
 
-          <h4>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
+          <h4 className="!mt-0">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h4>
           
           <p>
             Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem 
@@ -53,8 +57,8 @@ export default function Home() {
           <p>
             Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.&nbsp;B. um 
             Daten handeln, die Sie in ein Kontaktformular eingeben.
-          </p>
-          
+          </p><br/>
+
           <p>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. 
             Das sind vor allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die 
             Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
@@ -76,7 +80,7 @@ export default function Home() {
             für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung der 
             Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der 
             zuständigen Aufsichtsbehörde zu.
-          </p>
+          </p><br/>
           
           <p>
             Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
@@ -87,7 +91,7 @@ export default function Home() {
           <p>
             Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit 
             sogenannten Analyseprogrammen.
-          </p>
+          </p><br/>
           
           <p>
             Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.
@@ -104,10 +108,10 @@ export default function Home() {
           <p>
             Anbieter ist die ALL-INKL.COM - Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf 
             (nachfolgend All-Inkl). Details entnehmen Sie der Datenschutzerklärung von 
-            All-Inkl: <a href="https://all-inkl.com/datenschutzinformationen/" target="_blank" rel="noopener nofollow">
+            All-Inkl: <ExternalLink href='https://all-inkl.com/datenschutzinformationen/'>
             https://all-inkl.com/datenschutzinformationen/
-            </a>.
-          </p>
+            </ExternalLink>.
+          </p><br/>
           
           <p>
             Die Verwendung von All-Inkl erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse 
@@ -119,18 +123,18 @@ export default function Home() {
 
           <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
 
-          <h3>Datenschutz</h3>
+          <h3 className="!mt-0">Datenschutz</h3>
 
           <p>
             Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen 
             Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-          </p>
+          </p><br/>
           
           <p>
             Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, 
             mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir 
             erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.
-          </p>
+          </p><br/>
           
           <p>
             Wir weisen darauf hin, dass die Datenübertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitslücken 
@@ -141,20 +145,19 @@ export default function Home() {
           
           <p>
             Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-          </p>
+          </p><br/>
           
           <p>
             Nordseeauge<br/>
             Martina Kornfeld<br/>
             Hochheider Weg 174<br/>
             26125 Oldenburg
-          </p>
+          </p><br/>
 
-          {/* TODO number */}
           <p>
-            Telefon: +49 (0 175 2147984<br/>
-            E-Mail: corny6377@gmail.com
-          </p>
+            Telefon: <a href="tel:+4901752147984">+49 (0 175 2147984</a><br/>
+            E-Mail: <a href="mailto:corny6377@gmail.com">corny6377@gmail.com</a>
+          </p><br/>
 
           <p>
             Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die 
@@ -220,7 +223,7 @@ export default function Home() {
             IHRE BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE 
             FÜR DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE VERARBEITUNG DIENT DER 
             GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
-          </p>
+          </p><br/>
           
           <p>
             WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH 
@@ -253,6 +256,7 @@ export default function Home() {
             Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können 
             Sie sich jederzeit an uns wenden.
           </p>
+
           <h3>Recht auf Einschränkung der Verarbeitung</h3>
           
           <p>
@@ -299,7 +303,7 @@ export default function Home() {
 
           <h2>4. Datenerfassung auf dieser Website</h2>
 
-          <h3>Cookies</h3>
+          <h3 className="!mt-0">Cookies</h3>
           
           <p>
             Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät 
@@ -307,7 +311,7 @@ export default function Home() {
             (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. 
             Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung 
             durch Ihren Webbrowser erfolgt.
-          </p>
+          </p><br/>
           
           <p>
             Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog. Third-Party-Cookies). Third-Party-Cookies 
@@ -319,7 +323,7 @@ export default function Home() {
             Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind technisch notwendig, da bestimmte Webseitenfunktionen ohne 
             diese nicht funktionieren würden (z.&nbsp;B. die Warenkorbfunktion oder die Anzeige von Videos). Andere Cookies können zur 
             Auswertung des Nutzerverhaltens oder zu Werbezwecken verwendet werden.
-          </p>
+          </p><br/>
 
           <p>
             Cookies, die zur Durchführung des elektronischen 
@@ -330,14 +334,14 @@ export default function Home() {
             optimierten Bereitstellung seiner Dienste. Sofern eine Einwilligung zur Speicherung von Cookies und vergleichbaren 
             Wiedererkennungstechnologien abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage dieser Einwilligung 
             (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG); die Einwilligung ist jederzeit widerrufbar.
-          </p>
+          </p><br/>
 
           <p>
             Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall 
             erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies 
             beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt 
             sein.
-          </p>
+          </p><br/>
           
           <p>
             Welche Cookies und Dienste auf dieser Website eingesetzt werden, können Sie dieser Datenschutzerklärung entnehmen.
@@ -349,7 +353,7 @@ export default function Home() {
             Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen 
             dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. 
             Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-          </p>
+          </p><br/>
           
           <p>
             Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung 
@@ -357,7 +361,7 @@ export default function Home() {
             beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen 
             (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die 
             Einwilligung ist jederzeit widerrufbar.
-          </p>
+          </p><br/>
           
           <p>
             Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung 
@@ -371,7 +375,7 @@ export default function Home() {
             Wenn Sie uns per E-Mail, Telefon ontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten 
             (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne 
             Ihre Einwilligung weiter.
-          </p>
+          </p><br/>
 
           <p>
             Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern 
@@ -379,7 +383,7 @@ export default function Home() {
             ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an 
             uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese 
             abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.
-          </p>
+          </p><br/>
           
           <p>
             Die von Ihnen an uns per Kontaktanfragen übersandten 
@@ -390,20 +394,20 @@ export default function Home() {
           
           <h2>5. Soziale Medien</h2>
           
-          <h3>Facebook</h3>
+          <h3 className="!mt-0">Facebook</h3>
           
           <p>
             Auf dieser Website sind Elemente des sozialen Netzwerks Facebook integriert. Anbieter dieses Dienstes ist die Meta Platforms 
             Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland. Die erfassten Daten werden nach Aussage von Facebook jedoch auch 
             in die USA und in andere Drittländer übertragen.
-          </p>
+          </p><br/>
           
           <p>
-            Eine Übersicht über die Facebook Social-Media-Elemente finden Sie hier: 
-            <a href="https://developers.facebook.com/docs/plugins/?locale=de_DE" target="_blank" rel="noopener nofollow">
+            Eine Übersicht über die Facebook Social-Media-Elemente finden Sie hier:&nbsp;
+            <ExternalLink href='https://developers.facebook.com/docs/plugins/?locale=de_DE'>
             https://developers.facebook.com/docs/plugins/?locale=de_DE
-            </a>.
-          </p>
+            </ExternalLink>.
+          </p><br/>
           
           <p>
             Wenn das Social-Media-Element aktiv ist, wird eine direkte Verbindung zwischen Ihrem Endgerät und dem Facebook-Server 
@@ -411,17 +415,18 @@ export default function Home() {
             Facebook „Like-Button“ anklicken, während Sie in Ihrem Facebook-Account eingeloggt sind, können Sie die Inhalte dieser Website 
             auf Ihrem Facebook-Profil verlinken. Dadurch kann Facebook den Besuch dieser Website Ihrem Benutzerkonto zuordnen. Wir weisen 
             darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch 
-            Facebook erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Facebook unter: 
-            <a href="https://de-de.facebook.com/privacy/explanation" target="_blank" rel="noopener nofollow">
-            https://de-de.facebook.com/privacy/explanation</a>.
-          </p>
+            Facebook erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Facebook unter:&nbsp;
+            <ExternalLink href='https://de-de.facebook.com/privacy/explanation'>
+            https://de-de.facebook.com/privacy/explanation
+            </ExternalLink>.
+          </p><br/>
           
           <p>
             Soweit eine Einwilligung (Consent) eingeholt wurde, erfolgt der Einsatz des o.&nbsp;g. Dienstes auf Grundlage von Art. 6 Abs. 
             1 lit. a DSGVO und § 25 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Soweit keine Einwilligung eingeholt wurde, erfolgt 
             die Verwendung des Dienstes auf Grundlage unseres berechtigten Interesses an einer möglichst umfassenden Sichtbarkeit in den 
             Sozialen Medien.
-          </p>
+          </p><br/>
           
           <p>
             Soweit mit Hilfe des hier beschriebenen Tools personenbezogene Daten auf unserer Website erfasst und an Facebook weitergeleitet 
@@ -429,58 +434,60 @@ export default function Home() {
             für diese Datenverarbeitung verantwortlich (Art. 26 DSGVO). Die gemeinsame Verantwortlichkeit beschränkt sich dabei ausschließlich 
             auf die Erfassung der Daten und deren Weitergabe an Facebook. Die nach der Weiterleitung erfolgende Verarbeitung durch Facebook 
             ist nicht Teil der gemeinsamen Verantwortung. Die uns gemeinsam obliegenden Verpflichtungen wurden in einer Vereinbarung über 
-            gemeinsame Verarbeitung festgehalten. Den Wortlaut der Vereinbarung finden Sie unter: 
-            <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" rel="noopener nofollow">
+            gemeinsame Verarbeitung festgehalten. Den Wortlaut der Vereinbarung finden Sie unter:&nbsp;
+            <ExternalLink href='https://www.facebook.com/legal/controller_addendum' className="hyphen-auto">
             https://www.facebook.com/legal/controller_addendum
-            </a>. Laut dieser Vereinbarung sind wir für die Erteilung der Datenschutzinformationen beim Einsatz des Facebook-Tools und für die 
+            </ExternalLink>. Laut dieser Vereinbarung sind wir für die Erteilung der Datenschutzinformationen beim Einsatz des Facebook-Tools und für die 
             datenschutzrechtlich sichere Implementierung des Tools auf unserer Website verantwortlich. Für die Datensicherheit der 
             Facebook-Produkte ist Facebook verantwortlich. Betroffenenrechte (z.&nbsp;B. Auskunftsersuchen) hinsichtlich der bei Facebook 
             verarbeiteten Daten können Sie direkt bei Facebook geltend machen. Wenn Sie die Betroffenenrechte bei uns geltend machen, sind 
             wir verpflichtet, diese an Facebook weiterzuleiten.
-          </p>
+          </p><br/>
           
           <p>
-            Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: 
-            <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" rel="noopener nofollow">
+            Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier:&nbsp;
+            <ExternalLink href='https://www.facebook.com/legal/EU_data_transfer_addendum' className="hyphens-auto">
             https://www.facebook.com/legal/EU_data_transfer_addendum
-            </a>, <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" rel="noopener nofollow">
-            https://de-de.facebook.com/help/566994660333381
-            </a> und <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener nofollow">
-            https://www.facebook.com/policy.php</a>.
-          </p>
+            </ExternalLink>,&nbsp;<ExternalLink href='https://de-de.facebook.com/help/566994660333381'>
+            https://de-de.facebook.com/help/566994660333381&nbsp;
+            </ExternalLink>und&nbsp;<ExternalLink href='https://www.facebook.com/policy.php'>
+            https://www.facebook.com/policy.php
+            </ExternalLink>.
+          </p><br/>
           
           <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF). Der DPF ist ein Übereinkommen 
             zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den 
             USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. 
-            Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: 
-            <a href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt0000000GnywAAC&amp;status=Active" target="_blank" rel="noopener nofollow">
+            Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link:&nbsp;
+            <ExternalLink href='https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt0000000GnywAAC&amp;status=Active'>
             https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt0000000GnywAAC&amp;status=Active
-          </a></p>
+            </ExternalLink>
+          </p>
           
           <h3>Instagram</h3>
           
           <p>
             Auf dieser Website sind Funktionen des Dienstes Instagram eingebunden. Diese Funktionen werden angeboten durch die Meta Platforms 
             Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland.
-          </p>
+          </p><br/>
           
           <p>
             Wenn das Social-Media-Element aktiv ist, wird eine direkte Verbindung zwischen Ihrem Endgerät und dem Instagram-Server hergestellt. 
             Instagram erhält dadurch Informationen über den Besuch dieser Website durch Sie.
-          </p>
+          </p><br/>
           
           <p>
             Wenn Sie in Ihrem Instagram-Account eingeloggt sind, können Sie durch Anklicken des Instagram-Buttons die Inhalte dieser Website mit 
             Ihrem Instagram-Profil verlinken. Dadurch kann Instagram den Besuch dieser Website Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin, 
             dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Instagram erhalten.
-          </p>
+          </p><br/>
           
           <p>
             Soweit eine Einwilligung (Consent) eingeholt wurde, erfolgt der Einsatz des o.&nbsp;g. Dienstes auf Grundlage von Art. 6 Abs. 1 lit. a 
             DSGVO und § 25 TTDSG. Die Einwilligung ist jederzeit widerrufbar. Soweit keine Einwilligung eingeholt wurde, erfolgt die Verwendung des 
             Dienstes auf Grundlage unseres berechtigten Interesses an einer möglichst umfassenden Sichtbarkeit in den Sozialen Medien.
-          </p>
+          </p><br/>
           
           <p>
             Soweit mit Hilfe des hier beschriebenen Tools personenbezogene Daten auf unserer Website erfasst und an Facebook bzw. Instagram 
@@ -489,103 +496,108 @@ export default function Home() {
             dabei ausschließlich auf die Erfassung der Daten und deren Weitergabe an Facebook bzw. Instagram. Die nach der Weiterleitung 
             erfolgende Verarbeitung durch Facebook bzw. Instagram ist nicht Teil der gemeinsamen Verantwortung. Die uns gemeinsam obliegenden 
             Verpflichtungen wurden in einer Vereinbarung über gemeinsame Verarbeitung festgehalten. Den Wortlaut der Vereinbarung finden Sie 
-            unter: 
-            <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" rel="noopener nofollow">
+            unter:&nbsp;
+            <ExternalLink href='https://www.facebook.com/legal/controller_addendum'>
             https://www.facebook.com/legal/controller_addendum
-            </a>. Laut dieser Vereinbarung sind wir für die Erteilung der Datenschutzinformationen beim Einsatz des Facebook- bzw. 
+            </ExternalLink>. Laut dieser Vereinbarung sind wir für die Erteilung der Datenschutzinformationen beim Einsatz des Facebook- bzw. 
             Instagram-Tools und für die datenschutzrechtlich sichere Implementierung des Tools auf unserer Website verantwortlich. 
             Für die Datensicherheit der Facebook bzw. Instagram-Produkte ist Facebook verantwortlich. Betroffenenrechte (z.&nbsp;B. 
             Auskunftsersuchen) hinsichtlich der bei Facebook bzw. Instagram verarbeiteten Daten können Sie direkt bei Facebook geltend 
             machen. Wenn Sie die Betroffenenrechte bei uns geltend machen, sind wir verpflichtet, diese an Facebook weiterzuleiten.
-          </p>
-          
-          <p>Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: 
-            <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" rel="noopener nofollow">
-            https://www.facebook.com/legal/EU_data_transfer_addendum
-            </a>, <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener nofollow"
-            >https://privacycenter.instagram.com/policy/</a>
-             und <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" rel="noopener nofollow">
-             https://de-de.facebook.com/help/566994660333381
-          </a>.</p> 
+          </p><br/>
           
           <p>
-            Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Instagram: 
-            <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener nofollow">
+            Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier:&nbsp;
+            <ExternalLink href='https://www.facebook.com/legal/EU_data_transfer_addendum'>
+            https://www.facebook.com/legal/EU_data_transfer_addendum
+            </ExternalLink>, <ExternalLink href='https://privacycenter.instagram.com/policy/'>
             https://privacycenter.instagram.com/policy/
-          </a>.</p>
+            </ExternalLink>
+            &nbsp;und&nbsp;<ExternalLink href='https://de-de.facebook.com/help/566994660333381'>
+            https://de-de.facebook.com/help/566994660333381
+            </ExternalLink>.
+          </p><br/>
+          
+          <p>
+            Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Instagram:&nbsp;
+            <ExternalLink href='https://privacycenter.instagram.com/policy/'>
+            https://privacycenter.instagram.com/policy/
+            </ExternalLink>.
+          </p><br/>
           
           <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF). Der DPF ist ein Übereinkommen 
             zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den 
             USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. 
-            Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: 
-            <a href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt0000000GnywAAC&amp;status=Active" target="_blank" rel="noopener nofollow">
+            Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link:&nbsp;
+            <ExternalLink href='https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt0000000GnywAAC&amp;status=Active'>
             https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt0000000GnywAAC&amp;status=Active
-          </a></p>
+            </ExternalLink>
+          </p>
           
           <h2>6. Newsletter</h2>
           
-          <h3>Newsletter&shy;daten</h3>
+          <h3 className="!mt-0">Newsletter&shy;daten</h3>
           
           <p>
             Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, 
             welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind und mit dem Empfang des Newsletters 
             einverstanden sind. Weitere Daten werden nicht bzw. nur auf freiwilliger Basis erhoben. Diese Daten verwenden wir ausschließlich 
             für den Versand der angeforderten Informationen und geben diese nicht an Dritte weiter.
-          </p>
+          </p><br/>
           
           <p>
             Die Verarbeitung der in das Newsletteranmeldeformular eingegebenen Daten erfolgt ausschließlich auf Grundlage Ihrer Einwilligung 
             (Art. 6 Abs. 1 lit. a DSGVO). Die erteilte Einwilligung zur Speicherung der Daten, der E-Mail-Adresse sowie deren Nutzung zum Versand 
             des Newsletters können Sie jederzeit widerrufen, etwa über den „Austragen“-Link im Newsletter. Die Rechtmäßigkeit der bereits erfolgten 
             Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
-          </p>
+          </p><br/>
 
           <p>
             Die von Ihnen zum Zwecke des Newsletter-Bezugs bei uns hinterlegten Daten werden von uns bis zu Ihrer Austragung aus dem Newsletter 
             bei uns bzw. dem Newsletterdiensteanbieter gespeichert und nach der Abbestellung des Newsletters oder nach Zweckfortfall aus der 
             Newsletterverteilerliste gelöscht. Wir behalten uns vor, E-Mail-Adressen aus unserem Newsletterverteiler nach eigenem Ermessen im 
             Rahmen unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO zu löschen oder zu sperren.
-          </p>
+          </p><br/>
           
           <p>
             Daten, die zu anderen Zwecken bei uns gespeichert wurden, bleiben hiervon unberührt.
-          </p>
+          </p><br/>
           
           <p>
             Nach Ihrer Austragung aus der Newsletterverteilerliste wird Ihre E-Mail-Adresse bei uns bzw. dem Newsletterdiensteanbieter ggf. in einer 
             Blacklist gespeichert, sofern dies zur Verhinderung künftiger Mailings erforderlich ist. Die Daten aus der Blacklist werden nur für 
             diesen Zweck verwendet und nicht mit anderen Daten zusammengeführt. Dies dient sowohl Ihrem Interesse als auch unserem Interesse an 
             der Einhaltung der gesetzlichen Vorgaben beim Versand von Newslettern (berechtigtes Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO). 
-            Die Speicherung in der Blacklist ist zeitlich nicht befristet. <strong>Sie können der Speicherung widersprechen, sofern Ihre Interessen 
-            unser berechtigtes Interesse überwiegen.</strong>
+            Die Speicherung in der Blacklist ist zeitlich nicht befristet.
+            &nbsp;<br/><strong>Sie können der Speicherung widersprechen, sofern Ihre Interessen unser berechtigtes Interesse überwiegen.</strong>
           </p>
           
           <h2>7. Plugins und Tools</h2>
           
-          <h3>YouTube</h3>
+          <h3 className="!mt-0">YouTube</h3>
           
           <p>
             Diese Website bindet Videos der Website YouTube ein. Betreiber der Website ist die Google Ireland Limited („Google“), Gordon House, 
             Barrow Street, Dublin 4, Irland.
-          </p>
+          </p><br/>
           
           <p>
             Wenn Sie eine unserer Webseiten besuchen, auf denen YouTube eingebunden ist, wird eine Verbindung zu den Servern von YouTube 
             hergestellt. Dabei wird dem YouTube-Server mitgeteilt, welche unserer Seiten Sie besucht haben.
-          </p>
+          </p><br/>
           
           <p>
             Des Weiteren kann YouTube verschiedene Cookies auf Ihrem Endgerät speichern oder vergleichbare Technologien zur Wiedererkennung 
             verwenden (z.&nbsp;B. Device-Fingerprinting). Auf diese Weise kann YouTube Informationen über Besucher dieser Website erhalten. 
             Diese Informationen werden u.&nbsp;a. verwendet, um Videostatistiken zu erfassen, die Anwenderfreundlichkeit zu verbessern und 
             Betrugsversuchen vorzubeugen.
-          </p>
+          </p><br/>
           
           <p>
             Wenn Sie in Ihrem YouTube-Account eingeloggt sind, ermöglichen Sie YouTube, Ihr Surfverhalten direkt Ihrem persönlichen Profil 
             zuzuordnen. Dies können Sie verhindern, indem Sie sich aus Ihrem YouTube-Account ausloggen.
-          </p>
+          </p><br/>
           
           <p>
             Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes 
@@ -593,29 +605,31 @@ export default function Home() {
             ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies 
             oder den Zugriff auf Informationen im Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die 
             Einwilligung ist jederzeit widerrufbar.
-          </p>
+          </p><br/>
           
           <p>
-            Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter: 
-            <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener nofollow">
+            Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter:&nbsp;
+            <ExternalLink href='https://policies.google.com/privacy?hl=de'>
             https://policies.google.com/privacy?hl=de
-          </a>.</p>
+            </ExternalLink>.
+          </p><br/>
           
           <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF). Der DPF ist ein Übereinkommen zwischen 
             der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten 
             soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen 
-            hierzu erhalten Sie vom Anbieter unter folgendem Link: 
-            <a href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active" target="_blank" rel="noopener nofollow">
+            hierzu erhalten Sie vom Anbieter unter folgendem Link:&nbsp;
+            <ExternalLink href='https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active'>
             https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active
-          </a></p>
+            </ExternalLink>
+          </p>
           
           <h3>Google Maps</h3>
           
           <p>
             Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited („Google“), Gordon House, Barrow Street, 
             Dublin 4, Irland.
-          </p>
+          </p><br/>
           
           <p>
             Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der Regel 
@@ -623,7 +637,7 @@ export default function Home() {
             Datenübertragung. Wenn Google Maps aktiviert ist, kann Google zum Zwecke der einheitlichen Darstellung der Schriftarten Google 
             Fonts verwenden. Beim Aufruf von Google Maps lädt Ihr Browser die benötigten Web Fonts in ihren Browsercache, um Texte und 
             Schriftarten korrekt anzuzeigen.
-          </p>
+          </p><br/>
           
           <p>
             Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und an einer leichten 
@@ -631,35 +645,43 @@ export default function Home() {
             f DSGVO dar. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 
             6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen 
             im Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-          </p>
+          </p><br/>
           
           <p>
-            Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: 
-            <a href="https://privacy.google.com/businesses/gdprcontrollerterms/" target="_blank" rel="noopener nofollow">
+            Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier:&nbsp;
+            <ExternalLink href='https://privacy.google.com/businesses/gdprcontrollerterms/'>
             https://privacy.google.com/businesses/gdprcontrollerterms/
-            </a> und <a href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/" target="_blank" rel="noopener nofollow">
+            </ExternalLink>&nbsp;und&nbsp;<ExternalLink href='https://privacy.google.com/businesses/gdprcontrollerterms/sccs/'>
             https://privacy.google.com/businesses/gdprcontrollerterms/sccs/
-          </a>.</p>
+            </ExternalLink>.
+          </p><br/>
           
           <p>
-            Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google: 
-            <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener nofollow">
+            Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google:&nbsp;
+            <ExternalLink href='https://policies.google.com/privacy?hl=de'>
             https://policies.google.com/privacy?hl=de
-          </a>.</p>
+            </ExternalLink>.
+          </p><br/>
         
           <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework“ (DPF). Der DPF ist ein Übereinkommen 
             zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den 
             USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. 
-            Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: 
-            <a href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active" target="_blank" rel="noopener nofollow">
+            Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link:&nbsp;
+            <ExternalLink href='https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active'>
             https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active
-          </a></p>
+            </ExternalLink>
+          </p><br/>
           
           <p>
-            Quelle: <a href="https://www.e-recht24.de" rel="noopener nofollow" target="_parent">
+            Quelle:&nbsp;<ExternalLink href='https://www.e-recht24.de'>
             https://www.e-recht24.de
-          </a></p>
+            </ExternalLink>
+          </p><br/>
+
+          <p>
+            Technische Umsetzung der Website: <a href="mailto:Alexander.Dretvic@proton.me">Alexander.Dretvic@proton.me</a>
+          </p>
         
         </div>
       </div>

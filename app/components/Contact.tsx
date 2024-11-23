@@ -237,7 +237,7 @@ export default function Contact({
 
         <div className="flex gap-2">
           <input
-            className='w-5 h-5 mt-1'
+            className='w-5 h-5 mt-1 cursor-pointer hover:shadow-none'
             type="checkbox"
             id="dataPrivacy"
             checked={isDataPrivacyChecked}

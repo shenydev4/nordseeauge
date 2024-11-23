@@ -99,7 +99,8 @@ export default function Header() {
         <div className={`absolute left-0 top-0 w-full min-h-dvh h-dvh transition-opacity duration-500 pt-2 pb-4 ${isMobileMenu ? 'block':'hidden'} ${mobileMenuOpacity ? 'opacity-100':'opacity-0'}`}>
           <div className='absolute h-1/2 top-0 left-0 w-full bg-gradient-to-b from-orange-400/[0.3] to-transparent'></div>
           <div className='absolute w-full h-full top-0 left-0 -z-10'>
-            <img src="/bg-grass-1.jpg" alt="" className='object-cover blur h-full w-full scale-105 brightness-75 object-[100%_0]'/>
+            <img src="/bg-grass-1.jpg" alt="" className='object-cover h-full w-full scale-105 brightness-75 object-[100%_0]'/>
+            <div className="absolute top-0 left-0 w-full h-full backdrop-blur-sm" />
           </div>
           <div className="container relative h-full flex flex-col">
             <div className='flex justify-between items-center'>
@@ -127,8 +128,8 @@ export default function Header() {
               </div>
             </div>
               <div className='flex xl:gap-10 gap-5 mt-auto'>
-                <a href="/datenschutz" className='text-gray-300 [text-shadow:_1px_-1px_6px_rgb(0_0_0_/_60%)]'>Datenschutz</a>
-                <a href="/impressum" className='text-gray-300 [text-shadow:_1px_-1px_6px_rgb(0_0_0_/_60%)]'>Impressum</a>
+                <a href="/datenschutz" className={`text-gray-300 [text-shadow:_1px_-1px_6px_rgb(0_0_0_/_60%)] ${pathname === '/datenschutz' && 'text-yellow-200 after:!w-0'}`}>Datenschutz</a>
+                <a href="/impressum" className={`text-gray-300 [text-shadow:_1px_-1px_6px_rgb(0_0_0_/_60%)] ${pathname === '/impressum' && 'text-yellow-200 after:!w-0'}`}>Impressum</a>
               </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function Bookings({
 
       <ul className="mb-16">
         <li><b>privates Fotoshooting</b> an der Nordsee</li>
-        <li><b>Contenterstellung</b> für Social Medi Kanäle (Fotos, Reels, Videos, Storytelling)</li>
+        <li><b>Contenterstellung</b> für Social Media Kanäle (Fotos, Reels, Videos, Storytelling)</li>
         <li><b>Imagefilm</b> Fotos, Videos für Küstenregionen, Agenturen, Events, Ferienwohnung- Anbieter , Pensionen und Hotels und Privatanfragen</li>
         <li><b>Drohnenaufnahmen</b> (Voraussetzung Drohnenflug am Standort erlaubt)</li>
         <li><b>Rundflug</b> über dem Jadebusen für bis zu 6 Personen , nur bei NordseeAuge zum Exklusiv Preis</li>

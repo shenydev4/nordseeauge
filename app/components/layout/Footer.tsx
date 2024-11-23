@@ -22,7 +22,7 @@ export default function Footer() {
   const pathname = usePathname()
 
   return (
-    <div id='Footer' className='mt-auto relative overflow-hidden bg-blue-400'>
+    <div id='Footer' className='mt-auto relative overflow-hidden bg-gradient-to-b from-blue-400 to-blue-600'>
 
       <div className='pt-10 pb-20 z-10'>
         <div className='container flex xl:flex-row flex-col'>
@@ -41,11 +41,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className='z-0 relative' id='footer-socials'>
+      <div className='relative' id='footer-socials'>
         <img src="/bg-footer-original.jpg" alt="" className='z-0 w-full h-full absolute top-0 left-0 object-cover grayscale opacity-50 blur-[3px] object-[100%_1]'/>
 
-        <div className="container z-10 relative flex md:gap-20 gap-12 justify-center xl:py-10 pt-10 pb-4">
-          <ExternalLink href="https://www.instagram.com/nordseeauge" className="group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110">
+        <div className="container z-20 relative flex md:gap-20 gap-12 justify-center xl:py-10 pt-10 pb-4">
+          <ExternalLink href="https://www.instagram.com/nordseeauge" className="group flex flex-col gap-4 justify-center after:!w-0 hover:scale-110 md:hover:!text-yellow-200 hover:!text-black">
             <div className='xl:w-12 xl:h-12 w-9 h-9'>
               <Instagram />
             </div>
@@ -103,8 +103,8 @@ export default function Footer() {
                 <a className='xl:!text-[24px] !text-[20px]'>Cookies</a>
               </button>
               {showCookieBanner && <CookieBanner calledFromFooter />}
-              <a href="/datenschutz" className='xl:!text-[24px] !text-[20px]'>Datenschutz</a>
-              <a href="/impressum" className='xl:!text-[24px] !text-[20px]'>Impressum</a>
+              <a href="/datenschutz" className={`xl:!text-[24px] !text-[20px] ${pathname === '/datenschutz' && 'text-yellow-200 after:!w-0'}`}>Datenschutz</a>
+              <a href="/impressum" className={`xl:!text-[24px] !text-[20px] ${pathname === '/impressum' && 'text-yellow-200 after:!w-0'}`}>Impressum</a>
             </div>
           </div>
         </div>

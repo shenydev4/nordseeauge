@@ -15,6 +15,11 @@ label {
   font-family: barlow;
 }
 
+input:-webkit-autofill {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 input, textarea, select, textarea {
   padding: 10px 12px;
   font-family: barlow;

@@ -8,7 +8,7 @@ import Check from '../icons/Check';
 interface ExternalLinkProps {
   href: string;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const ExternalLink: React.FC<ExternalLinkProps> = ({ href, children, className }) => {

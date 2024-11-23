@@ -78,8 +78,8 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
       <div className='w-full h-full fixed top-0 left-0 z-[1000] bg-black/[0.5] overflow-clip'>
         <div className="max-h-[90%] overflow-y-auto md:w-[650px] w-[90%] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded shadow-[0_0_12px_-2px_rgba(0,0,0,0.4)] bg-yellow-200 xl:p-10 md:p-8 p-6">
           
-          <span className='flex items-center md:gap-3 gap-2'>
-            <h3>
+          <span className='flex md:flex-row flex-col-reverse md:items-center md:gap-3 gap-2'>
+            <h3 className='xl:text-[36px] md:text-[28px] text-[20px]'>
               Mit Cookies die See genießen
             </h3>
             <Image 
@@ -87,43 +87,43 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ calledFromFooter }) => {
               alt='Cookie Icon'
               width={52}
               height={52}
-              className='xl:w-14 xl:h-14 md:w-11 md:h-11 w-10 h-10'
+              className='xl:w-14 xl:h-14 md:w-11 md:h-11 w-8 h-8'
             />
           </span>
 
           <div className="mt-8 text-2xl space-y-2">
 
-            <div className='flex gap-3 items-center'>
+            <div className='flex items-center gap-3'>
               <input
                 className='cursor-pointer w-5 h-5'
                 type="checkbox" 
                 checked={true}
                 disabled
               />
-              <label className='cursor-pointer' onClick={() => toggleSetOpen(necessaryOpen, setNecessaryOpen)}>
+              <label className='cursor-pointer flex items-center gap-3' onClick={() => toggleSetOpen(necessaryOpen, setNecessaryOpen)}>
                 Notwendige Cookies
+                <span className={`w-5 h-5 duration-300 mt-1.5 ${necessaryOpen ? 'rotate-0':'rotate-180'}`}>
+                  <Arrow />
+                </span>
               </label>
-              <span className={`w-5 h-5 duration-300 mt-1.5 ${necessaryOpen ? 'rotate-0':'rotate-180'}`}>
-                <Arrow />
-              </span>
             </div>
             <div className={`${necessaryOpen ? 'pb-4 max-h-24':'pb-0 max-h-0'} xl:text-[20px] md:text-[18px] text-[16px]/[1.5] h-fit pl-8 overflow-hidden duration-500`}>
               Die Speicherung Ihrer Cookie-Einstellungen müssen lokal in Ihrem Browser gespeichert werden.
             </div>
 
-            <div className='flex gap-3 items-center'>
+            <div className='flex items-center gap-3'>
               <input
                 className='cursor-pointer w-5 h-5'
                 type="checkbox" 
                 checked={googleCookies} 
                 onChange={() => setGoogleCookies(!googleCookies)} 
               />
-              <label className='cursor-pointer' onClick={() => toggleSetOpen(googleOpen, setGoogleOpen)}>
+              <label className='cursor-pointer flex items-center gap-3' onClick={() => toggleSetOpen(googleOpen, setGoogleOpen)}>
                 Google Maps
+                <span className={`w-5 h-5 duration-300 mt-1.5 ${googleOpen ? 'rotate-0':'rotate-180'}`}>
+                  <Arrow />
+                </span>
               </label>
-              <span className={`w-5 h-5 duration-300 mt-1.5 ${googleOpen ? 'rotate-0':'rotate-180'}`}>
-                <Arrow />
-              </span>
             </div>
             <div className={`${googleOpen ? 'pb-4 max-h-32':'pb-0 max-h-0'} xl:text-[20px] md:text-[18px] text-[16px]/[1.5] h-fit pl-8 overflow-hidden duration-500`}>
               Diese Website bindet eine Karte von Google Maps ein. Durch die Nutzung von Google Maps werden Daten an Google übertragen. Ihre Zustimmung ermöglicht die Anzeige dieser Karte.

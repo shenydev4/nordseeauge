@@ -57,11 +57,11 @@ export default function Video({
           </button>
           
           <div className="flex items-center gap-2 md:mt-3 mt-2 xl:ml-20 md:ml-14 ml-8">
-            <span className="block w-8 h-8 mt-1.5 text-white">
+            <span className="block md:w-6 w-5 md:h-6 h-5 mt-1.5 text-white">
               <YouTubeIcon />
             </span>
             <ExternalLink href={videoLink} className="cursor-pointer text-white link-intext after:!bg-white hover:after:!bg-yellow-200">
-              <p className='after:!w-0'>
+              <p className="md:!text-[20px] !text-[16px]">
                 direkt zu YouTube
               </p>
             </ExternalLink>

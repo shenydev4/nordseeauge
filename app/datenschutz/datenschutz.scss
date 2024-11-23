@@ -2,20 +2,43 @@
 
 #Datenschutz {
   h2 {
-
+    @include value(font-size, 36px, 32px, 24px);
+    @include value(margin-top, 64px, 54px, 40px);
+    @include value(margin-bottom, 28px, 24px, 20px);
+    font-family: bebas;
+    letter-spacing: 2px;
   }
+
   h3 {
-
+    @include value(font-size, 32px, 26px, 22px);
+    @include value(margin-top, 48px, 38px, 28px);
+    @include value(margin-bottom, 24px, 20px, 18px);
   }
+
   h4 {
-
+    @include value(font-size, 28px, 24px, 20px);
+    @include value(margin-top, 24px, 16px, 16px);
+    @include value(margin-bottom, 16px, 16px, 16px);
   }
+
   p {
-
+    @include value(font-size, 20px, 16px, 16px);
   }
-  a {
 
+  a {
+    @include value(font-size, 20px, 16px, 16px);
+    text-decoration: underline;
+
+    &:after {
+      width: 0;
+    }
+  }
+
+  ul {
+    @include value(margin-bottom, 16px, 16px, 16px);
+
+    li {
+      @include value(font-size, 20px, 16px, 16px);
+    }
   }
 }
-
-// TODO: styles, probably mit !important für alle im Datenschutz vereinheitlichen. Alles sollte ein wenig kleiner, ist viel Text.

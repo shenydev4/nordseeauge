@@ -79,7 +79,7 @@ a {
   position: relative;
 
   &:not(.link-sm) {
-    @include value(font-size, 28px, 24px, 22px);
+    @include value(font-size, 28px, 22px, 20px);
   }
   &.link-sm {
     @include value(font-size, 24px, 22px, 20px);
