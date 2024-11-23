@@ -244,7 +244,7 @@ export default function Contact({
             onChange={handleDataPrivacyChange}
           />
           <label htmlFor="dataPrivacy" className='!text-[18px]'>
-            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="" className='link-intext !text-[18px]'>Datenschutzerklärung</a> zu.*
+            Ich stimme der Verarbeitung meiner Daten gemäß der <a href="/datenschutz" className='link-intext !text-[18px]'>Datenschutzerklärung</a> zu.
           </label>
         </div>
 
