@@ -25,7 +25,6 @@ export default function Home() {
 
           <p className="caption">
             // Falls nachher ein anderer Host verwendet wird, dann muss "2. Hosting" geupdatet werden<br/>
-            // Await Antwort, ob tel & email aktuell sind
           </p>
 
           <h1 className="xl:mb-16 md:mb-12 mb-10">
@@ -155,8 +154,8 @@ export default function Home() {
           </p><br/>
 
           <p>
-            Telefon: <a href="tel:+4901752147984">+49 (0 175 2147984</a><br/>
-            E-Mail: <a href="mailto:corny6377@gmail.com">corny6377@gmail.com</a>
+            Telefon: <a href="tel:+4901752147984">+49 0 175 2147984</a><br/>
+            E-Mail: <a href="mailto:info@nordseeauge.de">info@nordseeauge.de</a>
           </p><br/>
 
           <p>
