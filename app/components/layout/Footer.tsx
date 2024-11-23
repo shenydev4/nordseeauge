@@ -67,7 +67,7 @@ export default function Footer() {
           </ExternalLink>
         </div>
 
-        <div className="container z-10 relative py-6 flex flex-col">
+        <div className="container z-20 relative py-6 flex flex-col">
           <div className='flex xl:justify-around md:items-center md:flex-row flex-row md:flex-nowrap flex-wrap xl:gap-0 md:gap-0 gap-y-2'>
             <div className='xl:w-1/4 flex flex-col xl:basis-none xl:basis-1/4 md:basis-1/3 w-1/3 md:order-1 order-2'>
               <a href="/buchung" className={`link-sm w-fit md:mx-auto ${pathname === '/buchung' && 'text-yellow-200 after:!w-0'}`}>Buchung</a>
