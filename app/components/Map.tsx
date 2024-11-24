@@ -22,12 +22,14 @@ export default function Map({
   };
 
   return (
-    <div className={`relative shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)] ${className}`}>
+    <div className={`relative ${className}`}>
       
+      <h2 className='mb-4'>Besuchte Orte</h2>
+      <p className='mb-6'>Alle Orte, an denen ich bereits aktiv bin oder war, findet du auf der Karte hinterlegt.</p>
       {googleCookiesAccepted ? (
-        <iframe src="https://www.google.com/maps/d/embed?mid=1PedFtYkmpicvKp95dtnVL1Vg4RR9tXw&ehbc=2E312F" className='aspect-video' width="100%" height="100%"></iframe>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1PedFtYkmpicvKp95dtnVL1Vg4RR9tXw&ehbc=2E312F" className='aspect-video shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)]' width="100%" height="100%"></iframe>
       ):(
-        <div className='relative aspect-video w-full h-auto top-0 left-0 bg-black/[0.8] flex flex-col items-start justify-center'>
+        <div className='relative aspect-video w-full h-auto top-0 left-0 bg-black/[0.8] flex flex-col items-start justify-center shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)]'>
           <p className='xl:!text-[28px] md:!text-[18px] !text-[14px] text-white font-bold xl:px-20 md:px-14 px-8 w-full [text-shadow:_0_0_4px_rgb(0_0_0_/_100%)]'>
             Für die Benutzung der Google Maps Karte müssen Sie mit Googles Datenschutzbedingungen einverstanden sein.
           </p>
