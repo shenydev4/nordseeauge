@@ -138,7 +138,7 @@ export default function Contact({
           </span>
           Hinterlassen Sie uns eine Nachricht
         </h3>
-        <p className='mb-6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit beatae sint quas blanditiis neque quia commodi, aliquid vero possimus.</p>
+        <p className='mb-6'>Wir freuen uns, von Ihnen zu hören! Nutzen Sie das untenstehende Formular, um uns eine Nachricht zu senden oder Fragen zu stellen.</p>
         <p>
           Alternativ können Sie uns auch direkt eine Email an <EncodeMail mail='info@nordseeauge.de'/> schreiben.
         </p>
@@ -196,7 +196,7 @@ export default function Contact({
           </div>
 
           <div className='flex flex-col gap-1 basis-1/2'>
-            <label htmlFor="phoneNo">Telefon &#40;bei Rückruf Wunsch&#41;</label>
+            <label htmlFor="phoneNo">Telefon &#40;bei Rückrufwunsch&#41;</label>
             <input
               type="tel"
               placeholder=""

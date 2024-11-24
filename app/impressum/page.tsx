@@ -27,7 +27,7 @@ export default function Home() {
           </h1>
 
           <h3 className="xl:mb-8 md:mb-6 mb-4 xl:mt-14 md:mt-12 mt-10">
-            Angaben gemäß § 5 TMG
+            Angaben gemäß § 5 DDG
           </h3>
 
           <p className="">
@@ -65,6 +65,7 @@ export default function Home() {
           <h3 className="xl:mb-8 md:mb-6 mb-4 xl:mt-14 md:mt-12 mt-10 hyphens-manual">
             Verbraucherstreitbei&shy;le&shy;gung/U&shy;ni&shy;ver&shy;sal&shy;schlicht&shy;ungs&shy;stelle
           </h3>
+          <p className="caption">// soll das drinnen bleiben? Ist eigentlich überflüssig</p>
 
           <p className="hyphens-manual">
             Wir sind nicht bereit oder verpflichtet, an Streit&shy;bei&shy;le&shy;gungs&shy;ver&shy;fah&shy;ren vor einer Ver&shy;brau&shy;cher&shy;schlicht&shy;ungs&shy;stelle teilzunehmen.
