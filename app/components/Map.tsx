@@ -25,7 +25,7 @@ export default function Map({
     <div className={`relative ${className}`}>
       
       <h2 className='mb-4'>Besuchte Orte</h2>
-      <p className='mb-6'>Alle Orte, an denen ich bereits aktiv bin oder war, findet du auf der Karte hinterlegt.</p>
+      <p className='mb-6'>Alle Orte, an denen ich bereits aktiv war, findet du auf der Karte hinterlegt.</p>
       {googleCookiesAccepted ? (
         <iframe src="https://www.google.com/maps/d/embed?mid=1PedFtYkmpicvKp95dtnVL1Vg4RR9tXw&ehbc=2E312F" className='aspect-video shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)]' width="100%" height="100%"></iframe>
       ):(
