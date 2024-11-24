@@ -27,9 +27,9 @@ export default function Persona({
 
         <div className="basis-2/3 pt-3">
           <p className="xl:mb-6">
-            Moin aus dem hohen Norden. Mein Name ist Martina Kornfeld. Ich bin Influencer SocialMedia-Manager/Digital Creator an der Nordsee. Bekannt wurde ich im Social Media als das NordseeAuge. 
+            Moin aus dem hohen Norden. Mein Name ist Martina Kornfeld. Ich bin Influencer Social-Media-Manager/Digital Creator an der Nordsee. Bekannt wurde ich im Social Media als das NordseeAuge. 
             <br /><br />
-            <b>2023 gründete ich die  Nordsee-Agentur , wir begleiten spezielle Events an der Nordsee und zeigen Ihnen die schönsten Highlights für Ihren Urlaub. Ich erstelle mit meinem kleinen Team Imagefilme, Fotos , Social Media Content für Ihr Unternehmen. Auch private Shootings sind möglich.</b>
+            <b>2023 gründete ich die Nordsee-Agentur, wir begleiten spezielle Events an der Nordsee und zeigen Ihnen die schönsten Highlights für Ihren Urlaub. Ich erstelle mit meinem kleinen Team Imagefilme, Fotos, Social Media Content für Ihr Unternehmen. Auch private Shootings sind möglich.</b>
           </p>
           <p className="xl:block hidden">
             Mein Gebiet reicht von Großraum Oldenburg bis rund um den Jadebusen, Wilhelmshaven, Friesland, Ostfriesland, Wangerland, die Nordsee Inseln und oft auch darüber hinaus.

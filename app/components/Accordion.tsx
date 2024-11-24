@@ -232,7 +232,7 @@ export default function Accordion({
           </span>
         </p>
         <p className="caption">
-          *Alle Links führen zu Amazon
+          *Bei allen Links handelt es sich um Affiliate-Links und führen zu Amazon
         </p>
       </div>
       
@@ -252,7 +252,7 @@ export default function Accordion({
               {product.items.map((item, itemIndex) => (
                 <>
                   {item.link ? (
-                    <ExternalLink key={itemIndex} href={item.link} className="w-fit after:!w-0 md:!text-[22px] !text-[18px]">
+                    <ExternalLink key={itemIndex} href={item.link} className="w-fit after:!w-0 md:!text-[22px] !text-[18px] underline">
                       {item.productName}
                     </ExternalLink>
                   ):(
@@ -265,10 +265,11 @@ export default function Accordion({
               {product.notice && (
                 <div>
                   <p className="caption !text-red-700">
-                    ! Achtung: Haftpflichtversicherung notwendig
+                    !Achtung: Haftpflichtversicherung notwendig
                   </p>
                   <p className="caption">
-                    Registrierung im Luftfahrtbundesamt. Die Drohne ist mit zugeteilter ID zu kennzeichnen.
+                    Registrierung im Luftfahrtbundesamt. Die Drohne ist mit zugeteilter ID zu kennzeichnen.<br/>
+                    Bei Bedarf berate ich Sie gerne über den Service der Versicherung, die ich nutze.
                   </p>
                 </div>
               )}
